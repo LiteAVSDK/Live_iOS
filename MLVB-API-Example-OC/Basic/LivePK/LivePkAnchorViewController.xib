@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LivePkAnchorViewController">
+            <connections>
+                <outlet property="closePkButton" destination="GXR-lY-4DA" id="re5-bN-Uqi"/>
+                <outlet property="mainView" destination="pk4-nU-zvB" id="A42-Ww-WYu"/>
+                <outlet property="pkEnterButton" destination="g8Y-nK-ru1" id="GqU-dW-a8o"/>
+                <outlet property="remoteView" destination="6D8-sB-rCX" id="rtY-8d-FrW"/>
+                <outlet property="view" destination="GV7-4g-qcb" id="5Hv-Bc-Pg2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="GV7-4g-qcb">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jsY-CB-9ky">
+                    <rect key="frame" x="20" y="94" width="374" height="300"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pk4-nU-zvB">
+                            <rect key="frame" x="0.0" y="0.0" width="182" height="300"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6D8-sB-rCX">
+                            <rect key="frame" x="192" y="0.0" width="182" height="300"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8Y-nK-ru1">
+                                    <rect key="frame" x="61" y="128" width="60" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="WGF-w0-xWk"/>
+                                        <constraint firstAttribute="width" constant="60" id="dFB-LQ-azS"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" imagePadding="0.0">
+                                        <imageReference key="image" image="livelink_start"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="imageView.contentMode">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="clickPkEnterButton:" destination="-1" eventType="touchUpInside" id="F6Z-mr-gIO"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXR-lY-4DA">
+                                    <rect key="frame" x="0.0" y="0.0" width="44" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="m7c-a9-MuN"/>
+                                        <constraint firstAttribute="width" constant="30" id="rq6-uG-F9M"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="livelink_stop" title=" "/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="imageView.contentMode">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="clickClosePkButton:" destination="-1" eventType="touchUpInside" id="iV6-8S-qFN"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="GXR-lY-4DA" firstAttribute="leading" secondItem="6D8-sB-rCX" secondAttribute="leading" id="LLK-bR-0HI"/>
+                                <constraint firstItem="GXR-lY-4DA" firstAttribute="top" secondItem="6D8-sB-rCX" secondAttribute="top" id="NeU-ti-wSh"/>
+                                <constraint firstItem="g8Y-nK-ru1" firstAttribute="centerX" secondItem="6D8-sB-rCX" secondAttribute="centerX" id="RTJ-DI-dz1"/>
+                                <constraint firstItem="g8Y-nK-ru1" firstAttribute="centerY" secondItem="6D8-sB-rCX" secondAttribute="centerY" constant="8" id="V5D-Tj-WCm"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="pk4-nU-zvB" firstAttribute="leading" secondItem="jsY-CB-9ky" secondAttribute="leading" id="JLK-zv-b6h"/>
+                        <constraint firstItem="6D8-sB-rCX" firstAttribute="width" secondItem="pk4-nU-zvB" secondAttribute="width" id="Mmg-n1-Tov"/>
+                        <constraint firstItem="pk4-nU-zvB" firstAttribute="top" secondItem="jsY-CB-9ky" secondAttribute="top" id="r27-HU-7hX"/>
+                        <constraint firstAttribute="bottom" secondItem="pk4-nU-zvB" secondAttribute="bottom" id="xPA-m0-3sg"/>
+                        <constraint firstAttribute="height" constant="300" id="zyr-6V-cHr"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="gRo-YU-CeN"/>
+            <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="gRo-YU-CeN" firstAttribute="trailing" secondItem="jsY-CB-9ky" secondAttribute="trailing" constant="20" id="Ak6-tS-d7h"/>
+                <constraint firstItem="jsY-CB-9ky" firstAttribute="top" secondItem="gRo-YU-CeN" secondAttribute="top" constant="50" id="c54-dE-tHG"/>
+                <constraint firstItem="jsY-CB-9ky" firstAttribute="leading" secondItem="gRo-YU-CeN" secondAttribute="leading" constant="20" id="iw5-cS-Fjt"/>
+            </constraints>
+            <point key="canvasLocation" x="-307.24637681159425" y="34.821428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="livelink_start" width="110" height="110"/>
+        <image name="livelink_stop" width="22.5" height="22.5"/>
+    </resources>
+</document>
