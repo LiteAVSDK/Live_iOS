@@ -17,6 +17,7 @@
   - [自定义视频采集](./Advanced/CustomVideoCapture)
   - [第三方美颜](./Advanced/ThirdBeauty)
   - [RTC连麦+超低延时播放](./Advanced/RTCPushAndPlay)
+  - [画中画](./Advanced/PictureInPicture)
 
 ## 环境准备
 - Xcode 11.0及以上版本

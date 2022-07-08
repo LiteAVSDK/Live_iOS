@@ -64,6 +64,11 @@
                           @"title": Localize(@"MLVB-API-Example.Home.RTCPushAndPlay"),
                           @"desc": @"",
                           @"class": @"RTCPushAndPlayEnterViewController"
+                      },
+                      @{
+                          @"title": Localize(@"MLVB-API-Example.Home.PictureInPicture"),
+                          @"desc": @"",
+                          @"class": @"PictureInPictureViewController"
                       }
 
               ]}];

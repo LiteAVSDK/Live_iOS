@@ -16,6 +16,7 @@
 |  |  ├─ RTCPushAndPlay       // 演示 RTC 推流和播放示例代码
 |  |  ├─ LocalVideoShare      // 演示本地视频分享示例代码
 |  |  ├─ ThirdBeauty          // 演示第三方美颜示例代码
+|  |  ├─ PictureInPicture     // 演示系统画中画示例代码
 |  
 ├─ SDK 
 │  ├─ LiteAVSDK_Smart_x.y.zzzz.aar        // 如果您下载的是 Smart 专用 zip 包，解压后将出现此文件夹，其中 x.y.zzzz 表示 SDK 版本号 

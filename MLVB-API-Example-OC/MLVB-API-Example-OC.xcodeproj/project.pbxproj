@@ -47,6 +47,8 @@
 		47ECB9892626867C00201FCB /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ECB9882626867C00201FCB /* libc++.tbd */; };
 		47ECB98C2626868400201FCB /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ECB98B2626868400201FCB /* Accelerate.framework */; };
 		47ECB98E2626868E00201FCB /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ECB98D2626868E00201FCB /* libresolv.tbd */; };
+		47F149E4286BF3E900781688 /* PictureInPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F149E2286BF3E900781688 /* PictureInPictureViewController.m */; };
+		47F149E5286BF3E900781688 /* PictureInPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47F149E3286BF3E900781688 /* PictureInPictureViewController.xib */; };
 		880B3C4A2624411B002683FB /* GenerateTestUserSig.m in Sources */ = {isa = PBXBuildFile; fileRef = 880B3C482624411B002683FB /* GenerateTestUserSig.m */; };
 		88167CB3268488C2001D99DC /* LivePushCameraEnterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88167CB1268488C2001D99DC /* LivePushCameraEnterViewController.m */; };
 		88167CB4268488C2001D99DC /* LivePushCameraEnterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88167CB2268488C2001D99DC /* LivePushCameraEnterViewController.xib */; };
@@ -75,6 +77,7 @@
 		88A2C84726706305006FC026 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ECB9882626867C00201FCB /* libc++.tbd */; };
 		88AB3E4B2689D65D00A75212 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 477EC9AA26268D0F007AAC4F /* Localized.strings */; };
 		88AB3E51268A008C00A75212 /* URLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AB3E50268A008C00A75212 /* URLUtils.m */; };
+		88BC38A22844710E00814931 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88BC38A12844710E00814931 /* GLKit.framework */; };
 		88C4C062268B503000FBB698 /* CustomVideoCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4C060268B503000FBB698 /* CustomVideoCaptureViewController.m */; };
 		88C4C063268B503000FBB698 /* CustomVideoCaptureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C4C061268B503000FBB698 /* CustomVideoCaptureViewController.xib */; };
 		88C4C06A268C48DF00FBB698 /* ThirdBeautyFaceunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E072AF2636A6C80027D05E /* ThirdBeautyFaceunityViewController.m */; };
@@ -188,6 +191,9 @@
 		47ECB9882626867C00201FCB /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		47ECB98B2626868400201FCB /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		47ECB98D2626868E00201FCB /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		47F149E1286BF3E900781688 /* PictureInPictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureInPictureViewController.h; sourceTree = "<group>"; };
+		47F149E2286BF3E900781688 /* PictureInPictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureInPictureViewController.m; sourceTree = "<group>"; };
+		47F149E3286BF3E900781688 /* PictureInPictureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureInPictureViewController.xib; sourceTree = "<group>"; };
 		880B3C482624411B002683FB /* GenerateTestUserSig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenerateTestUserSig.m; sourceTree = "<group>"; };
 		880B3C492624411B002683FB /* GenerateTestUserSig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenerateTestUserSig.h; sourceTree = "<group>"; };
 		88167CB0268488C2001D99DC /* LivePushCameraEnterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LivePushCameraEnterViewController.h; sourceTree = "<group>"; };
@@ -227,6 +233,7 @@
 		88A1A889268DA81A007F630D /* LivePkAudienceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LivePkAudienceViewController.xib; sourceTree = "<group>"; };
 		88AB3E4F268A008C00A75212 /* URLUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLUtils.h; sourceTree = "<group>"; };
 		88AB3E50268A008C00A75212 /* URLUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLUtils.m; sourceTree = "<group>"; };
+		88BC38A12844710E00814931 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		88C4C05F268B503000FBB698 /* CustomVideoCaptureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomVideoCaptureViewController.h; sourceTree = "<group>"; };
 		88C4C060268B503000FBB698 /* CustomVideoCaptureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomVideoCaptureViewController.m; sourceTree = "<group>"; };
 		88C4C061268B503000FBB698 /* CustomVideoCaptureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomVideoCaptureViewController.xib; sourceTree = "<group>"; };
@@ -288,6 +295,7 @@
 				406AB16A280048E100A99B81 /* MetalKit.framework in Frameworks */,
 				406AB168280048D800A99B81 /* CoreTelephony.framework in Frameworks */,
 				47ECB98E2626868E00201FCB /* libresolv.tbd in Frameworks */,
+				88BC38A22844710E00814931 /* GLKit.framework in Frameworks */,
 				88167CE92685BF58001D99DC /* Foundation.framework in Frameworks */,
 				406AB166280048C800A99B81 /* SystemConfiguration.framework in Frameworks */,
 				400C520226A67EE30036AC40 /* AssetsLibrary.framework in Frameworks */,
@@ -413,6 +421,7 @@
 		47E0727A2636A6C80027D05E /* Advanced */ = {
 			isa = PBXGroup;
 			children = (
+				47F149E0286BF3A600781688 /* PictureInPicture */,
 				47E0729D2636A6C80027D05E /* CustomVideoCapture */,
 				47E072AD2636A6C80027D05E /* ThirdBeauty */,
 				88FC7846268C674800768C53 /* RTCPushAndPlay */,
@@ -455,6 +464,16 @@
 				88FC77AD268C625300768C53 /* README.md */,
 			);
 			path = ThirdBeauty;
+			sourceTree = "<group>";
+		};
+		47F149E0286BF3A600781688 /* PictureInPicture */ = {
+			isa = PBXGroup;
+			children = (
+				47F149E1286BF3E900781688 /* PictureInPictureViewController.h */,
+				47F149E2286BF3E900781688 /* PictureInPictureViewController.m */,
+				47F149E3286BF3E900781688 /* PictureInPictureViewController.xib */,
+			);
+			path = PictureInPicture;
 			sourceTree = "<group>";
 		};
 		880B3C472624411B002683FB /* Debug */ = {
@@ -593,6 +612,7 @@
 		88ED6FE02624364700C75B9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				88BC38A12844710E00814931 /* GLKit.framework */,
 				47748037283E21F900505C4C /* CoreServices.framework */,
 				406AB169280048E100A99B81 /* MetalKit.framework */,
 				406AB167280048D800A99B81 /* CoreTelephony.framework */,
@@ -738,6 +758,7 @@
 				88167CC62684AC91001D99DC /* LivePushCameraViewController.xib in Resources */,
 				88C4C06C268C49FD00FBB698 /* ThirdBeautyFaceunityViewController.xib in Resources */,
 				47E0725F263656110027D05E /* InfoPlist.strings in Resources */,
+				47F149E5286BF3E900781688 /* PictureInPictureViewController.xib in Resources */,
 				88FC7854268C8C2D00768C53 /* RTCPushAndPlayAnchorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -775,6 +796,7 @@
 				885A56472689ABB500D9D55F /* LivePushScreenEnterViewController.m in Sources */,
 				C1937C99274F799200F19E99 /* LiveLinkUserInputViewController.m in Sources */,
 				477ECA0A2627D344007AAC4F /* UIViewController+AlertViewController.m in Sources */,
+				47F149E4286BF3E900781688 /* PictureInPictureViewController.m in Sources */,
 				8839C3D52689BEF5000FF58C /* LivePlayViewController.m in Sources */,
 				C1937CBD275080CB00F19E99 /* LivePkFindPkUserController.m in Sources */,
 				477EC97F26268B0A007AAC4F /* AppDelegate.m in Sources */,
