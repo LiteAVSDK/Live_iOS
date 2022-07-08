@@ -23,6 +23,13 @@
 "MLVB-API-Example.Home.CustomCamera" = "自定义视频采集";
 "MLVB-API-Example.Home.ThirdBeauty" = "第三方美颜";
 "MLVB-API-Example.Home.RTCPushAndPlay" = "RTC连麦+超低延时播放";
+"MLVB-API-Example.Home.PictureInPicture" = "画中画功能";
+"MLVB-API-Example.Home.OpenPictureInPicture" = "开启画中画功能";
+"MLVB-API-Example.Home.ClosePictureInPicture" = "关闭画中画功能";
+"MLVB-API-Example.Home.PermissionFailed" = "开启权限失败";
+"MLVB-API-Example.Home.NotSupported" = "不支持画中画模式";
+"MLVB-API-Example.Home.Errormessage" = "错误信息：";
+"MLVB-API-Example.Home.Ignorenullsamplebuffer" = "忽略无效SampleBuffer";
 
 "MLVB-API-Example.LivePushCamera.title" = "MLVB 摄像头推流";
 "MLVB-API-Example.LivePushCamera.streamIdInput" = "请输入streamId";

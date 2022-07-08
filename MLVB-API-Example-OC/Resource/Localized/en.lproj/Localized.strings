@@ -19,6 +19,13 @@
 "MLVB-API-Example.Home.CustomCamera" = "Custom Video Capturing";
 "MLVB-API-Example.Home.ThirdBeauty" = "Third-Party Beauty Filters";
 "MLVB-API-Example.Home.RTCPushAndPlay" = "RTC Co-anchoring + Ultra-low-latency Playback";
+"MLVB-API-Example.Home.PictureInPicture" = "Picture in Picture";
+"MLVB-API-Example.Home.OpenPictureInPicture" = "Open Picture in Picture";
+"MLVB-API-Example.Home.ClosePictureInPicture" = "Close Picture in Picture";
+"MLVB-API-Example.Home.PermissionFailed" = "Failed to enable permission";
+"MLVB-API-Example.Home.NotSupported" = "Picture-in-picture is not supported";
+"MLVB-API-Example.Home.Errormessage" = "Error message:";
+"MLVB-API-Example.Home.Ignorenullsamplebuffer" = "Ignore null samplebuffer";
 
 "MLVB-API-Example.LivePushCamera.title" = "MLVB Publishing (Camera)";
 "MLVB-API-Example.LivePushCamera.streamIdInput" = "Stream ID";
