@@ -48,8 +48,7 @@
 		47ECB98E2626868E00201FCB /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ECB98D2626868E00201FCB /* libresolv.tbd */; };
 		47F149E4286BF3E900781688 /* PictureInPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F149E2286BF3E900781688 /* PictureInPictureViewController.m */; };
 		47F149E5286BF3E900781688 /* PictureInPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47F149E3286BF3E900781688 /* PictureInPictureViewController.xib */; };
-		4CAF833BAA407AF65E119A10 /* TXLiteAVSDK_Live.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466EA4608EE86AC835B35501 /* TXLiteAVSDK_Live.framework */; };
-		6722F7C45055CFA47F870F3D /* TXLiteAVSDK_Live.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466EA4608EE86AC835B35501 /* TXLiteAVSDK_Live.framework */; };
+		8174BC4D331C4444B47E5773 /* TXLiteAVSDK_Smart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B771DFC813C7BAA22BF7C4A0 /* TXLiteAVSDK_Smart.framework */; };
 		880B3C4A2624411B002683FB /* GenerateTestUserSig.m in Sources */ = {isa = PBXBuildFile; fileRef = 880B3C482624411B002683FB /* GenerateTestUserSig.m */; };
 		88167CB3268488C2001D99DC /* LivePushCameraEnterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88167CB1268488C2001D99DC /* LivePushCameraEnterViewController.m */; };
 		88167CB4268488C2001D99DC /* LivePushCameraEnterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88167CB2268488C2001D99DC /* LivePushCameraEnterViewController.xib */; };
@@ -106,6 +105,7 @@
 		EB147B18282B908100C0E2DC /* ThirdBeautyTencentEffectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB147B17282B908100C0E2DC /* ThirdBeautyTencentEffectViewController.xib */; };
 		EB147B1B282D2F1200C0E2DC /* ThirdBeautyEntranceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB147B1A282D2F1200C0E2DC /* ThirdBeautyEntranceViewController.xib */; };
 		EB147B1D282D2F1700C0E2DC /* ThirdBeautyEntranceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB147B1C282D2F1700C0E2DC /* ThirdBeautyEntranceViewController.m */; };
+		F66284B77B05970F983A5207 /* TXLiteAVSDK_Smart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B771DFC813C7BAA22BF7C4A0 /* TXLiteAVSDK_Smart.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,7 +154,6 @@
 		406AB167280048D800A99B81 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		406AB169280048E100A99B81 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		40D550EB26A6A9BF00FE9F13 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		466EA4608EE86AC835B35501 /* TXLiteAVSDK_Live.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TXLiteAVSDK_Live.framework; path = ../SDK/TXLiteAVSDK_Live.framework; sourceTree = "<group>"; };
 		4723A7BE26315F920094AC81 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		4723A7C126315FA30094AC81 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		4723A7C326315FAA0094AC81 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -249,6 +248,7 @@
 		88FC7856268C8F6E00768C53 /* RTCPushAndPlayAudienceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTCPushAndPlayAudienceViewController.h; sourceTree = "<group>"; };
 		88FC7857268C8F6E00768C53 /* RTCPushAndPlayAudienceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTCPushAndPlayAudienceViewController.m; sourceTree = "<group>"; };
 		88FC7858268C8F6E00768C53 /* RTCPushAndPlayAudienceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RTCPushAndPlayAudienceViewController.xib; sourceTree = "<group>"; };
+		B771DFC813C7BAA22BF7C4A0 /* TXLiteAVSDK_Smart.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TXLiteAVSDK_Smart.framework; path = ../SDK/TXLiteAVSDK_Smart.framework; sourceTree = "<group>"; };
 		C1937C62274F75F700F19E99 /* LivePkUserInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivePkUserInputViewController.h; sourceTree = "<group>"; };
 		C1937C63274F75F700F19E99 /* LivePkUserInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivePkUserInputViewController.m; sourceTree = "<group>"; };
 		C1937C83274F799100F19E99 /* LiveLinkAnchorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveLinkAnchorViewController.h; sourceTree = "<group>"; };
@@ -303,7 +303,7 @@
 				47ECB9892626867C00201FCB /* libc++.tbd in Frameworks */,
 				47748038283E21F900505C4C /* CoreServices.framework in Frameworks */,
 				4723A7C226315FA30094AC81 /* CoreMedia.framework in Frameworks */,
-				4CAF833BAA407AF65E119A10 /* TXLiteAVSDK_Live.framework in Frameworks */,
+				F66284B77B05970F983A5207 /* TXLiteAVSDK_Smart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +319,7 @@
 				406AB16D2800490100A99B81 /* MetalKit.framework in Frameworks */,
 				406AB16B280048F400A99B81 /* TXLiteAVSDK_ReplayKitExt.framework in Frameworks */,
 				8894456B26282A3200193FAD /* ReplayKit.framework in Frameworks */,
-				6722F7C45055CFA47F870F3D /* TXLiteAVSDK_Live.framework in Frameworks */,
+				8174BC4D331C4444B47E5773 /* TXLiteAVSDK_Smart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +406,7 @@
 				406AB15A280048A600A99B81 /* TXFFmpeg.xcframework */,
 				406AB158280048A600A99B81 /* TXLiteAVSDK_ReplayKitExt.framework */,
 				406AB159280048A600A99B81 /* TXSoundTouch.xcframework */,
-				466EA4608EE86AC835B35501 /* TXLiteAVSDK_Live.framework */,
+				B771DFC813C7BAA22BF7C4A0 /* TXLiteAVSDK_Smart.framework */,
 			);
 			name = SDK;
 			path = ../SDK;
