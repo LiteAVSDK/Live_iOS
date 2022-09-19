@@ -3,6 +3,7 @@
 //  MLVB-API-Example-OC
 //
 //  Created by bluedang on 2021/6/28.
+//  Copyright © 2021 Tencent. All rights reserved.
 //
 
 /*
@@ -59,9 +60,9 @@
     self.title = self.streamId;
     
     [self.startButton setBackgroundColor:[UIColor themeBlueColor]];
-    [self.startButton setTitle:Localize(@"MLVB-API-Example.LivePushScreen.start")
+    [self.startButton setTitle:localize(@"MLVB-API-Example.LivePushScreen.start")
                       forState:UIControlStateNormal];
-    [self.startButton setTitle:Localize(@"MLVB-API-Example.LivePushScreen.stop")
+    [self.startButton setTitle:localize(@"MLVB-API-Example.LivePushScreen.stop")
                       forState:UIControlStateSelected];
     self.startButton.titleLabel.adjustsFontSizeToFitWidth = true;
 }

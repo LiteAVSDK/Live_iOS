@@ -3,6 +3,7 @@
 //  MLVB-API-Example-OC
 //
 //  Created by bluedang on 2021/6/28.
+//  Copyright © 2021 Tencent. All rights reserved.
 //
 
 #import "LivePlayEnterViewController.h"
@@ -28,30 +29,30 @@
 }
 
 - (void)setupDefaultUIConfig {
-    self.title = Localize(@"MLVB-API-Example.LivePlay.title");
-    self.streamIdLabel.text = Localize(@"MLVB-API-Example.LivePlay.streamIdInput");
+    self.title = localize(@"MLVB-API-Example.LivePlay.title");
+    self.streamIdLabel.text = localize(@"MLVB-API-Example.LivePlay.streamIdInput");
     self.streamIdLabel.adjustsFontSizeToFitWidth = true;
     
     
-    [self.standPlayButton setTitle:Localize(@"MLVB-API-Example.LivePlay.standPlay") forState:UIControlStateNormal];
+    [self.standPlayButton setTitle:localize(@"MLVB-API-Example.LivePlay.standPlay") forState:UIControlStateNormal];
     [self.standPlayButton setBackgroundColor:[UIColor themeGrayColor]];
     self.standPlayButton.titleLabel.adjustsFontSizeToFitWidth = true;
     
-    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:Localize(@"MLVB-API-Example.LivePlay.descripView") attributes:@{
+    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:localize(@"MLVB-API-Example.LivePlay.descripView") attributes:@{
         (id)NSForegroundColorAttributeName : [UIColor whiteColor],
         (id)NSFontAttributeName : [UIFont systemFontOfSize:14],
     }];
-    [text appendAttributedString:[[NSAttributedString alloc] initWithString:Localize(@"MLVB-API-Example.LivePlay.descripRecommend") attributes:@{
+    [text appendAttributedString:[[NSAttributedString alloc] initWithString:localize(@"MLVB-API-Example.LivePlay.descripRecommend") attributes:@{
         (id)NSForegroundColorAttributeName : [UIColor redColor],
         (id)NSFontAttributeName : [UIFont systemFontOfSize:14],
     }]];
     self.descriptionTextView.attributedText = text;
     
-    [self.rtcPlayButton setTitle:Localize(@"MLVB-API-Example.LivePlay.rtcPlay") forState:UIControlStateNormal];
+    [self.rtcPlayButton setTitle:localize(@"MLVB-API-Example.LivePlay.rtcPlay") forState:UIControlStateNormal];
     [self.rtcPlayButton setBackgroundColor:[UIColor themeGrayColor]];
     self.rtcPlayButton.titleLabel.adjustsFontSizeToFitWidth = true;
     
-    [self.lebPlayButton setTitle:Localize(@"MLVB-API-Example.LivePlay.lebPlay") forState:UIControlStateNormal];
+    [self.lebPlayButton setTitle:localize(@"MLVB-API-Example.LivePlay.lebPlay") forState:UIControlStateNormal];
     [self.lebPlayButton setBackgroundColor:[UIColor themeBlueColor]];
     self.lebPlayButton.titleLabel.adjustsFontSizeToFitWidth = true;
 

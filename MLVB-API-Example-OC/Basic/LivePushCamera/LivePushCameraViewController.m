@@ -3,6 +3,7 @@
 //  MLVB-API-Example-OC
 //
 //  Created by bluedang on 2021/6/24.
+//  Copyright © 2021 Tencent. All rights reserved.
 //
 
 /*
@@ -68,27 +69,27 @@
 - (void)setupDefalutUIConfig {
     self.title = self.streamId;
     
-    self.audioSettingLabel.text = Localize(@"MLVB-API-Example.LivePushCamera.audioSetting");
+    self.audioSettingLabel.text = localize(@"MLVB-API-Example.LivePushCamera.audioSetting");
     self.audioSettingLabel.adjustsFontSizeToFitWidth = true;
     
-    self.videoSettingLabel.text = Localize(@"MLVB-API-Example.LivePushCamera.videoSetting");
+    self.videoSettingLabel.text = localize(@"MLVB-API-Example.LivePushCamera.videoSetting");
     self.videoSettingLabel.adjustsFontSizeToFitWidth = true;
     
-    self.resolutionLabel.text = Localize(@"MLVB-API-Example.LivePushCamera.resolution");
+    self.resolutionLabel.text = localize(@"MLVB-API-Example.LivePushCamera.resolution");
     self.resolutionLabel.adjustsFontSizeToFitWidth = true;
-    self.rotationLabel.text = Localize(@"MLVB-API-Example.LivePushCamera.rotation");
+    self.rotationLabel.text = localize(@"MLVB-API-Example.LivePushCamera.rotation");
     self.rotationLabel.adjustsFontSizeToFitWidth = true;
-    self.mirrorLabel.text = Localize(@"MLVB-API-Example.LivePushCamera.mirror");
+    self.mirrorLabel.text = localize(@"MLVB-API-Example.LivePushCamera.mirror");
     self.mirrorLabel.adjustsFontSizeToFitWidth = true;
 
-    [self.closeMicButton setTitle:Localize(@"MLVB-API-Example.LivePushCamera.closeMic") forState:UIControlStateNormal];
-    [self.closeMicButton setTitle:Localize(@"MLVB-API-Example.LivePushCamera.openMic") forState:UIControlStateSelected];
+    [self.closeMicButton setTitle:localize(@"MLVB-API-Example.LivePushCamera.closeMic") forState:UIControlStateNormal];
+    [self.closeMicButton setTitle:localize(@"MLVB-API-Example.LivePushCamera.openMic") forState:UIControlStateSelected];
     [self.closeMicButton setBackgroundColor:[UIColor themeBlueColor]];
     self.closeMicButton.titleLabel.adjustsFontSizeToFitWidth = true;
     
     [self.resolutonButton setTitle:@"540P" forState:UIControlStateNormal];
     [self.rotationButton setTitle:@"0" forState:UIControlStateNormal];
-    [self.mirrorButton setTitle:Localize(@"MLVB-API-Example.LivePushCamera.mirrorFront") forState:UIControlStateNormal];
+    [self.mirrorButton setTitle:localize(@"MLVB-API-Example.LivePushCamera.mirrorFront") forState:UIControlStateNormal];
     self.resolutonButton.titleLabel.adjustsFontSizeToFitWidth = true;
     self.rotationButton.titleLabel.adjustsFontSizeToFitWidth = true;
     self.mirrorButton.titleLabel.adjustsFontSizeToFitWidth = true;
@@ -188,9 +189,9 @@
 }
 
 - (IBAction)onMirrorButtonClick:(UIButton*)sender {
-    NSArray *mirrorArr = @[Localize(@"MLVB-API-Example.LivePushCamera.mirrorFront"),
-                             Localize(@"MLVB-API-Example.LivePushCamera.mirrorAll"),
-                             Localize(@"MLVB-API-Example.LivePushCamera.mirrorNO")];
+    NSArray *mirrorArr = @[localize(@"MLVB-API-Example.LivePushCamera.mirrorFront"),
+                             localize(@"MLVB-API-Example.LivePushCamera.mirrorAll"),
+                             localize(@"MLVB-API-Example.LivePushCamera.mirrorNO")];
     NSDictionary *mirrorDic = @{
         mirrorArr[0] : @(V2TXLiveMirrorTypeAuto),
         mirrorArr[1] : @(V2TXLiveMirrorTypeEnable),

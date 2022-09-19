@@ -3,6 +3,7 @@
 //  MLVB-API-Example-OC
 //
 //  Created by adams on 2021/4/22.
+//  Copyright © 2021 Tencent. All rights reserved.
 //
 
 /*
@@ -83,14 +84,14 @@
 - (void)setupDefaultUIConfig {
     self.streamIdTextField.text = [NSString generateRandomStreamId];
     
-    self.streamIdLabel.text = Localize(@"MLVB-API-Example.ThirdBeauty.streamIdInput");
+    self.streamIdLabel.text = localize(@"MLVB-API-Example.ThirdBeauty.streamIdInput");
     self.streamIdLabel.adjustsFontSizeToFitWidth = true;
     
     self.startPushStreamButton.backgroundColor = [UIColor themeBlueColor];
-    [self.startPushStreamButton setTitle:Localize(@"MLVB-API-Example.ThirdBeauty.startPush") forState:UIControlStateNormal];
-    [self.startPushStreamButton setTitle:Localize(@"MLVB-API-Example.ThirdBeauty.stopPush") forState:UIControlStateSelected];
+    [self.startPushStreamButton setTitle:localize(@"MLVB-API-Example.ThirdBeauty.startPush") forState:UIControlStateNormal];
+    [self.startPushStreamButton setTitle:localize(@"MLVB-API-Example.ThirdBeauty.stopPush") forState:UIControlStateSelected];
 
-    self.setBeautyLabel.text = Localize(@"MLVB-API-Example.ThirdBeauty.beautyLevel");
+    self.setBeautyLabel.text = localize(@"MLVB-API-Example.ThirdBeauty.beautyLevel");
     NSInteger value = self.setBeautySlider.value * 6;
     self.beautyNumLabel.text = [NSString stringWithFormat:@"%ld",value];
 }

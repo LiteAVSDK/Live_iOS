@@ -3,6 +3,7 @@
 //  MLVB-API-Example-OC
 //
 //  Created by dangjiahe on 2021/4/10.
+//  Copyright © 2021 Tencent. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -20,53 +21,53 @@
 - (NSArray *)homeData {
     if (!_homeData) {
         _homeData = @[
-            @{@"type":Localize(@"MLVB-API-Example.Home.BasicFunctions"),
+            @{@"type":localize(@"MLVB-API-Example.Home.BasicFunctions"),
               @"module":@[
                       @{
-                          @"title": Localize(@"MLVB-API-Example.Home.LivePushCamera"),
+                          @"title": localize(@"MLVB-API-Example.Home.LivePushCamera"),
                           @"desc": @"",
                           @"class": @"LivePushCameraEnterViewController"
                       },
                       @{
-                          @"title": Localize(@"MLVB-API-Example.Home.LivePushScreen"),
+                          @"title": localize(@"MLVB-API-Example.Home.LivePushScreen"),
                           @"desc": @"",
                           @"class": @"LivePushScreenEnterViewController"
                       },
                       @{
-                          @"title": Localize(@"MLVB-API-Example.Home.LivePlay"),
+                          @"title": localize(@"MLVB-API-Example.Home.LivePlay"),
                           @"desc": @"",
                           @"class": @"LivePlayEnterViewController"
                       },
                       @{
-                          @"title": Localize(@"MLVB-API-Example.Home.LiveLink"),
+                          @"title": localize(@"MLVB-API-Example.Home.LiveLink"),
                           @"desc": @"",
                           @"class": @"LiveLinkUserInputViewController"
                       },
                       @{
-                          @"title": Localize(@"MLVB-API-Example.Home.LivePK"),
+                          @"title": localize(@"MLVB-API-Example.Home.LivePK"),
                           @"desc": @"",
                           @"class": @"LivePkUserInputViewController"
                       }
               ]},
-            @{@"type":Localize(@"MLVB-API-Example.Home.AdvancedFeatures"),
+            @{@"type":localize(@"MLVB-API-Example.Home.AdvancedFeatures"),
               @"module":@[
                       @{
-                          @"title": Localize(@"MLVB-API-Example.Home.CustomCamera"),
+                          @"title": localize(@"MLVB-API-Example.Home.CustomCamera"),
                           @"desc": @"",
                           @"class": @"CustomVideoCaptureViewController"
                       },
                       @{
-                          @"title": Localize(@"MLVB-API-Example.Home.ThirdBeauty"),
+                          @"title": localize(@"MLVB-API-Example.Home.ThirdBeauty"),
                           @"desc": @"",
                           @"class": @"ThirdBeautyEntranceViewController"
                       },
                       @{
-                          @"title": Localize(@"MLVB-API-Example.Home.RTCPushAndPlay"),
+                          @"title": localize(@"MLVB-API-Example.Home.RTCPushAndPlay"),
                           @"desc": @"",
                           @"class": @"RTCPushAndPlayEnterViewController"
                       },
                       @{
-                          @"title": Localize(@"MLVB-API-Example.Home.PictureInPicture"),
+                          @"title": localize(@"MLVB-API-Example.Home.PictureInPicture"),
                           @"desc": @"",
                           @"class": @"PictureInPictureViewController"
                       }
@@ -84,7 +85,7 @@
 }
 
 - (void)setupNaviBarStatus {
-    self.navigationItem.title = Localize(@"MLVB-API-Example.Home.Title");
+    self.navigationItem.title = localize(@"MLVB-API-Example.Home.Title");
     [self.navigationController setNavigationBarHidden:false animated:false];
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
@@ -94,7 +95,7 @@
 }
 
 - (void)setupTableView {
-    [self.homeTableView registerNib:[UINib nibWithNibName:@"HomeTableViewCell" bundle:nil] forCellReuseIdentifier: HomeTableViewCellReuseIdentify];
+    [self.homeTableView registerNib:[UINib nibWithNibName:@"HomeTableViewCell" bundle:nil] forCellReuseIdentifier: gHomeTableViewCellReuseIdentify];
     self.homeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
@@ -127,7 +128,7 @@
 
 #pragma mark - UITableViewDelegate
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:HomeTableViewCellReuseIdentify forIndexPath:indexPath];
+    HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:gHomeTableViewCellReuseIdentify forIndexPath:indexPath];
     NSDictionary *homeDic = self.homeData[indexPath.section];
     NSArray *homeArray = [homeDic objectForKey:@"module"];
     [cell setHomeDictionary:homeArray[indexPath.row]];
