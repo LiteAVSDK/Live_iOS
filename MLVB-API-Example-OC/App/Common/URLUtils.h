@@ -3,6 +3,7 @@
 //  MLVB-API-Example-OC
 //
 //  Created by bluedang on 2021/6/28.
+//  Copyright © 2021 Tencent. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

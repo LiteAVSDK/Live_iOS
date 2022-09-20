@@ -1,3 +1,5 @@
+//  Copyright © 2021 Tencent. All rights reserved.
+
 /*
  * Module:   GenerateTestUserSig
  *

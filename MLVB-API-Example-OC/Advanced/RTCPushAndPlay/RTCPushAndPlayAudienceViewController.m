@@ -3,13 +3,14 @@
 //  MLVB-API-Example-OC
 //
 //  Created by bluedang on 2021/6/30.
+//  Copyright © 2021 Tencent. All rights reserved.
 //
 
 /*
  RTC连麦+超低延时播放的观众视角
  MLVB RTC连麦+超低延时播放的观众视角
  本文件展示如何集成RTC连麦+超低延时播放功能
- 1、拉主播的流 API: [self.livePlayer startPlay:url];
+ 1、拉主播的流 API: [self.livePlayer startLivePlay:url];
  2、打开扬声器 API:[self.livePusher startMicrophone];
  3、打开摄像头 API: [self.livePusher startCamera:true];
  4、开始推流 API：[self.livePusher startPush:url];
@@ -18,7 +19,7 @@
  RTC Co-anchoring + Ultra-low-latency Playback View for Audience
  RTC Co-anchoring + Ultra-low-latency Playback View for Audience in MLVB App
  This document shows how to integrate the RTC co-anchoring + ultra-low-latency playback feature.
- 1. Play the anchor’s streams: [self.livePlayer startPlay:url]
+ 1. Play the anchor’s streams: [self.livePlayer startLivePlay:url]
  2. Turn speaker on: [self.livePusher startMicrophone]
  3. Turn camera on: [self.livePusher startCamera:true]
  4. Start publishing: [self.livePusher startPush:url]
@@ -72,12 +73,12 @@
 
 - (void)setupDefaultUIConfig {
     self.title = self.streamId;
-    self.streamIdLabel.text = Localize(@"MLVB-API-Example.RTCPushAndPlay.streamIdInput");
+    self.streamIdLabel.text = localize(@"MLVB-API-Example.RTCPushAndPlay.streamIdInput");
     self.streamIdLabel.adjustsFontSizeToFitWidth = true;
 
     self.acceptLinkButton.backgroundColor = [UIColor themeBlueColor];
-    [self.acceptLinkButton setTitle:Localize(@"MLVB-API-Example.RTCPushAndPlay.rtcPlay") forState:UIControlStateNormal];
-    [self.acceptLinkButton setTitle:Localize(@"MLVB-API-Example.RTCPushAndPlay.stopPlay") forState:UIControlStateSelected];
+    [self.acceptLinkButton setTitle:localize(@"MLVB-API-Example.RTCPushAndPlay.rtcPlay") forState:UIControlStateNormal];
+    [self.acceptLinkButton setTitle:localize(@"MLVB-API-Example.RTCPushAndPlay.stopPlay") forState:UIControlStateSelected];
     self.acceptLinkButton.titleLabel.adjustsFontSizeToFitWidth = true;
 }
 
@@ -90,7 +91,7 @@
     NSString *url = [URLUtils generateLebPlayUrl:streamId];
     
     [player setRenderView:self.view];
-    [player startPlay:url];
+    [player startLivePlay:url];
 }
 
 - (void)stopPlayWithPlayer:(V2TXLivePlayer*)player {
