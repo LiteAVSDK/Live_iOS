@@ -11,12 +11,14 @@ This demo covers the following features (click to view the details of a feature)
   - [Publishing from Camera](./Basic/LivePushCamera)
   - [Publishing from Screen](./Basic/LivePushScreen)
   - [Playback](./Basic/LivePlay)
+  - [Leb Playback](./Basic/LebPlay)
   - [Co-anchoring](./Basic/LiveLink)
   - [Competition](./Basic/LinkPK)
 - Advanced Features
   - [Custom Video Capturing](./Advanced/CustomVideoCapture)
   - [Third-Party Beauty Filters](./Advanced/ThirdBeauty)
   - [RTC Co-anchoring + Ultra-low-latency Playback](./Advanced/RTCPushAndPlay)
+  - [Webrtc Auto Bitrate](./Advanced/LebAutoBitrate)
 
 ## Environment Requirements
 - Xcode 11.0 or above
@@ -70,4 +72,4 @@ Open `MLVB-API-Example-OC.xcodeproj` in the source code directory with Xcode (11
 Welcome to join our Telegram Group to communicate with our professional engineers! We are more than happy to hear from you~
 Click to join: [https://t.me/+EPk6TMZEZMM5OGY1](https://t.me/+EPk6TMZEZMM5OGY1)   
 Or scan the QR code   
-  <img src="https://qcloudimg.tencent-cloud.cn/raw/79cbfd13877704ff6e17f30de09002dd.jpg" width="300px">    
+  <img src="https://qcloudimg.tencent-cloud.cn/raw/79cbfd13877704ff6e17f30de09002dd.jpg" width="300px">

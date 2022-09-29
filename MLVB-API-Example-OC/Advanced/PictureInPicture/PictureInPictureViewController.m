@@ -61,9 +61,9 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
     self.view.backgroundColor = UIColor.blackColor;
     
     self.pictureInPictureButton.layer.cornerRadius = 8;
-    [self.pictureInPictureButton setTitle:Localize(@"MLVB-API-Example.Home.OpenPictureInPicture") forState:UIControlStateNormal];
+    [self.pictureInPictureButton setTitle:localize(@"MLVB-API-Example.Home.OpenPictureInPicture") forState:UIControlStateNormal];
     
-    [self.livePlayer startPlay:G_DEFAULT_URL];
+    [self.livePlayer startLivePlay:G_DEFAULT_URL];
     
     if (@available(iOS 15.0, *)) {
         if ([AVPictureInPictureController isPictureInPictureSupported]) {
@@ -72,7 +72,7 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
             [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&error];
             [[AVAudioSession sharedInstance] setActive:YES error:nil];
             if (error) {
-                NSLog(@"%@%@",Localize(@"MLVB-API-Example.Home.PermissionFailed"),error);
+                NSLog(@"%@%@",localize(@"MLVB-API-Example.Home.PermissionFailed"),error);
             }
             [self setupSampleBufferDisplayLayer];
             [self.view.layer addSublayer:self.sampleBufferDisplayLayer];
@@ -83,7 +83,7 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
             self.pipViewController.delegate = self;
             self.pipViewController.canStartPictureInPictureAutomaticallyFromInline = YES;
         } else {
-            NSLog(@"%@",Localize(@"MLVB-API-Example.Home.NotSupported"));
+            NSLog(@"%@",localize(@"MLVB-API-Example.Home.NotSupported"));
         }
     }
 }
@@ -126,13 +126,13 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
         [layer enqueueSampleBuffer:sampleBuffer];
         CFRelease(sampleBuffer);
         if (layer.status == AVQueuedSampleBufferRenderingStatusFailed) {
-            NSLog(@"%@%@",Localize(@"MLVB-API-Example.Home.Errormessage"),layer.error);
+            NSLog(@"%@%@",localize(@"MLVB-API-Example.Home.Errormessage"),layer.error);
             if (-11847 == layer.error.code) {
                 [self rebuildSampleBufferDisplayLayer];
             }
         }
     } else {
-        NSLog(@"%@",Localize(@"MLVB-API-Example.Home.Ignorenullsamplebuffer"));
+        NSLog(@"%@",localize(@"MLVB-API-Example.Home.Ignorenullsamplebuffer"));
     }
 }
 
@@ -182,7 +182,7 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
 }
 
 - (void)pictureInPictureControllerDidStartPictureInPicture:(AVPictureInPictureController *)pictureInPictureController {
-    [self.pictureInPictureButton setTitle:Localize(@"MLVB-API-Example.Home.ClosePictureInPicture") forState:UIControlStateNormal];
+    [self.pictureInPictureButton setTitle:localize(@"MLVB-API-Example.Home.ClosePictureInPicture") forState:UIControlStateNormal];
     NSLog(@"pictureInPictureControllerDidStartPictureInPicture");
 }
 
@@ -203,7 +203,7 @@ restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:(void (^)(BOOL)
 }
 
 - (void)pictureInPictureControllerDidStopPictureInPicture:(AVPictureInPictureController *)pictureInPictureController {
-    [self.pictureInPictureButton setTitle:Localize(@"MLVB-API-Example.Home.OpenPictureInPicture") forState:UIControlStateNormal];
+    [self.pictureInPictureButton setTitle:localize(@"MLVB-API-Example.Home.OpenPictureInPicture") forState:UIControlStateNormal];
     NSLog(@"pictureInPictureControllerDidStopPictureInPicture");
 }
 
