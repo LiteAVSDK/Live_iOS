@@ -9,6 +9,7 @@
 |  |  ├─ LiveLink             // 演示直播连麦示例代码
 |  |  ├─ LivePK               // 演示直播 PK 示例代码
 |  |  ├─ LivePlay             // 演示直播播放示例代码
+|  |  ├─ LebPlay              // 演示快直播播放示例代码
 |  |  ├─ LivePushCamera       // 演示摄像头推流示例代码
 |  |  ├─ LivePushScreen       // 演示屏幕推流示例代码
 |  ├─ Advanced                // 演示直播高级功能示例代码
@@ -16,7 +17,8 @@
 |  |  ├─ RTCPushAndPlay       // 演示 RTC 推流和播放示例代码
 |  |  ├─ LocalVideoShare      // 演示本地视频分享示例代码
 |  |  ├─ ThirdBeauty          // 演示第三方美颜示例代码
-|  |  ├─ PictureInPicture     // 演示系统画中画示例代码
+|  |  ├─ LebAutoBitrate       // 演示快直播自适应播放代码
+|  |  ├─ HlsAutoBitrate       // 演示HLS自适应播放代码
 |  
 ├─ SDK 
 │  ├─ LiteAVSDK_Smart.framework       // 如果您下载的是 Smart 专用 zip 包，解压后将出现此文件夹

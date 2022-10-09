@@ -6,4 +6,4 @@ When Demo is compiled, the SDK will be automatically downloaded to this director
 
 ## DownLoad URL
 
-[Download iOS MLVB SDK](https://liteav.sdk.qcloud.com/download/latest/TXLiteAVSDK_Smart_iOS_latest.zip)
+[Download iOS MLVB SDK](https://liteav.sdk.qcloud.com/download/latest/TXLiteAVSDK_Live_iOS_latest.zip)

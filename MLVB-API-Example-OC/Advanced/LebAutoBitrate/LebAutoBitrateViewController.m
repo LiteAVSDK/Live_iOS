@@ -5,7 +5,7 @@
  本文件展示如何集成快直播自适应码率播放功能
  1、设置渲染画面 API:[self.livePlayer setRenderView:self.view];
  2、开始播放 API: [self.livePlayer startLivePlay:url];
- 参考文档：待上线
+ 参考文档：https://cloud.tencent.com/document/product/454/81212
  开始自适应码率播放后，就无法进行进行无缝切流了。如果在播放状态进入自适应码率，
  需要先停止当前播放，然后再开始自适应播放
  */
@@ -14,7 +14,7 @@ Webrtc Auto Bitrate
  MLVB APP Webrtc Auto Bitrate
  1、Set Render View API:[self.livePlayer setRenderView:self.view];
  2、Start Play API: [self.livePlayer startLivePlay:url];
- Documentation: to do online
+ Documentation: https://cloud.tencent.com/document/product/454/81212
  After the adaptive bitrate playback is started, seamless streaming cannot be performed.
  If you enter the adaptive bit rate in the playback state,
  Need to stop current playback before starting adaptive playback
@@ -84,10 +84,10 @@ typedef NS_ENUM(NSInteger, PlayResolution) {
             transcodingName = @"demo720p";
             break;
         case Resolution540p:
-            transcodingName = @"demo480p";
+            transcodingName = @"demo540p";
             break;
     }
-    return [NSString stringWithFormat:@"%@?tabr_bitrates=demo1080p,demo720p,demo480p&tabr_start_bitrate=%@",
+    return [NSString stringWithFormat:@"%@?tabr_bitrates=demo1080p,demo720p,demo540p&tabr_start_bitrate=%@",
             baseUrl,transcodingName];
 }
 

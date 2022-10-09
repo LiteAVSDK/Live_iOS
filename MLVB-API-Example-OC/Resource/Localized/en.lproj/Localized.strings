@@ -164,3 +164,6 @@ LEB is an ultra-low-latency version of LVB. It delivers excellent instant stream
 "MLVB-API-Example.LebAutoBitrate.540p" = "switch to 540p";
 "MLVB-API-Example.LebAutoBitrate.startAutoBitrate" = "start auto bitrate";
 "MLVB-API-Example.LebAutoBitrate.stopAutoBitrate" = "stop auto bitrate";
+
+"MLVB-API-Example.HlsAutoBitrate.title" = "HLS Auto Bitrate";
+"MLVB-API-Example.HlsAutoBitrate.autoBitrate" = "switch to auto bitrate";
