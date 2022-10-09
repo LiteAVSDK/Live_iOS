@@ -212,3 +212,6 @@
 "MLVB-API-Example.LebAutoBitrate.540p" = "无缝切换到540p";
 "MLVB-API-Example.LebAutoBitrate.startAutoBitrate" = "开始自适应播放";
 "MLVB-API-Example.LebAutoBitrate.stopAutoBitrate" = "停止自适应播放";
+
+"MLVB-API-Example.HlsAutoBitrate.title" = "HLS自适应播放";
+"MLVB-API-Example.HlsAutoBitrate.autoBitrate" = "切换到自适应播放";

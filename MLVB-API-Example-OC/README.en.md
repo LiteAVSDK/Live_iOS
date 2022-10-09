@@ -19,6 +19,7 @@ This demo covers the following features (click to view the details of a feature)
   - [Third-Party Beauty Filters](./Advanced/ThirdBeauty)
   - [RTC Co-anchoring + Ultra-low-latency Playback](./Advanced/RTCPushAndPlay)
   - [Webrtc Auto Bitrate](./Advanced/LebAutoBitrate)
+  - [HLS Auto Bitrate](./Advanced/HlsAutoBitrate)
 
 ## Environment Requirements
 - Xcode 11.0 or above

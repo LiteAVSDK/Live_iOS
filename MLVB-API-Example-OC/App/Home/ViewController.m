@@ -80,7 +80,13 @@
                           @"title": localize(@"MLVB-API-Example.LebAutoBitrate.title"),
                           @"desc": @"",
                           @"class": @"LebAutoBitrateViewController"
+                      },
+                      @{
+                          @"title": localize(@"MLVB-API-Example.HlsAutoBitrate.title"),
+                          @"desc": @"",
+                          @"class": @"HlsAutoBitrateViewController"
                       }
+
               ]}];
     }
     return _homeData;

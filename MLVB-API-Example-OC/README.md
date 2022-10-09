@@ -20,6 +20,7 @@
   - [RTC连麦+超低延时播放](./Advanced/RTCPushAndPlay)
   - [画中画](./Advanced/PictureInPicture)
   - [快直播自适应播放](./Advanced/LebAutoBitrate)
+  - [HLS自适应播放](./Advanced/HlsAutoBitrate)
 
 ## 环境准备
 - Xcode 11.0及以上版本

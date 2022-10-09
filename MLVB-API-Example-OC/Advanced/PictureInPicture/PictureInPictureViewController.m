@@ -127,6 +127,7 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
         CFRelease(sampleBuffer);
         if (layer.status == AVQueuedSampleBufferRenderingStatusFailed) {
             NSLog(@"%@%@",localize(@"MLVB-API-Example.Home.Errormessage"),layer.error);
+            [layer flush];
             if (-11847 == layer.error.code) {
                 [self rebuildSampleBufferDisplayLayer];
             }
