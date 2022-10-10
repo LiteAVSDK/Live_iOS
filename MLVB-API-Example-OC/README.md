@@ -1,72 +1,77 @@
 # MLVB API-Example 
-中文 | [English](README.en.md)
+[简体中文](README.cn.md) | English
 
-## 前言
-这个开源示例Demo主要演示了 [移动直播 SDK](https://cloud.tencent.com/document/product/454) 部分API的使用示例，帮助开发者可以更好的理解 移动直播 SDK 的API，从而快速实现一些移动直播场景的基本功能。 
+## Background
+This open-source demo shows how to use some APIs of the [MLVB SDK](https://www.tencentcloud.com/document/product/1071) to help you better understand the APIs and use them to implement some basic MLVB features. 
 
-## 结构说明
-在这个示例项目中包含了以下场景:（带上对应的跳转目录，方便用户快速浏览感兴趣的功能）
+## Contents
+This demo covers the following features (click to view the details of a feature):
 
-- 基础功能
-  - [摄像头推流](./Basic/LivePushCamera)
-  - [录屏推流](./Basic/LivePushScreen)
-  - [直播拉流](./Basic/LivePlay)
-  - [快直播拉流](./Basic/LebPlay)
-  - [连麦互动](./Basic/LiveLink)
-  - [连麦PK](./Basic/LinkPK)
-- 进阶功能
-  - [自定义视频采集](./Advanced/CustomVideoCapture)
-  - [第三方美颜](./Advanced/ThirdBeauty)
-  - [RTC连麦+超低延时播放](./Advanced/RTCPushAndPlay)
-  - [画中画](./Advanced/PictureInPicture)
-  - [快直播自适应播放](./Advanced/LebAutoBitrate)
-  - [HLS自适应播放](./Advanced/HlsAutoBitrate)
+- Basic Features
+  - [Publishing from Camera](./Basic/LivePushCamera)
+  - [Publishing from Screen](./Basic/LivePushScreen)
+  - [Playback](./Basic/LivePlay)
+  - [Leb Playback](./Basic/LebPlay)
+  - [Co-anchoring](./Basic/LiveLink)
+  - [Competition](./Basic/LinkPK)
+- Advanced Features
+  - [Custom Video Capturing](./Advanced/CustomVideoCapture)
+  - [Third-Party Beauty Filters](./Advanced/ThirdBeauty)
+  - [RTC Co-anchoring + Ultra-low-latency Playback](./Advanced/RTCPushAndPlay)
+  - [Picture In Picture](./Advanced/PictureInPicture)
+  - [Webrtc Auto Bitrate](./Advanced/LebAutoBitrate)
+  - [HLS Auto Bitrate](./Advanced/HlsAutoBitrate)
 
-## 环境准备
-- Xcode 11.0及以上版本
-- 请确保您的项目已设置有效的开发者签名
+## Environment Requirements
+- Xcode 11.0 or above
+- A valid developer signature for your project
 
 
-## 运行示例
+## Demo Run Example
 
-### 前提条件
-您已 [注册腾讯云](https://cloud.tencent.com/document/product/378/17985) 账号，并完成 [实名认证](https://cloud.tencent.com/document/product/378/3629)。
+### Prerequisites
+You have [signed up for a Tencent Cloud account](https://intl.cloud.tencent.com/document/product/378/17985) and completed [identity verification](https://intl.cloud.tencent.com/document/product/378/3629).
 
-### 申请SDKAPPID 和 SECRETKEY
-1. 登录实时音视频控制台，选择【开发辅助】>【[快速跑通Demo](https://console.cloud.tencent.com/trtc/quickstart)】。
-2. 单击【立即开始】，输入您的应用名称，例如`TestTRTC`，单击【创建应用】。
+### Obtaining `SDKAppID` and secret key
+1. In the TRTC console, select **Application Management** > **[Create application](https://console.tencentcloud.com/trtc/app/create)**.
+2. Enter an application name such as `TestTRTC`, and click **Next**.
 
-![ #900px](https://main.qcloudimg.com/raw/169391f6711857dca6ed8cfce7b391bd.png)
-3. 创建应用完成后，单击【我已下载，下一步】，可以查看 SDKAppID 和密钥信息。
+![ #900px](https://qcloudimg.tencent-cloud.cn/raw/51c73a617e69a76ed26e6f74b0071ec9.png)
+3. Click **Next** to view your `SDKAppID` and key.
 
-### 开通移动直播服务
-1. [开通直播服务并绑定域名](https://console.cloud.tencent.com/live/livestat) 如果还没开通，点击申请开通，之后在域名管理中配置推流域名和拉流域名
-2. [获取SDK的测试License](https://console.cloud.tencent.com/live/license) 
+### Activating MLVB
+1. [Activate CSS and add domain names](https://console.intl.cloud.tencent.com/live/common/apply?code=0). If you haven’t activated CSS, click **Apply for Activation**, and add publishing and playback domain names in **Domain Management**.
+2. [Obtain a trial license to use the SDK](https://console.intl.cloud.tencent.com/live/license). 
 
-### 配置 Demo 工程文件
+### Configuring demo project files
 
-1. 打开 Debug 目录下的 [GenerateTestUserSig.h](debug/GenerateTestUserSig.h) 文件。
-2. 配置`GenerateTestUserSig.h`文件中的参数：
+1. Open the [GenerateTestUserSig.h](debug/GenerateTestUserSig.h) file in the `Debug` directory.
+2. Set parameters in `GenerateTestUserSig.h` as follows:
 
-  - SDKAPPID：替换该变量值为上一步骤中在页面上看到的 SDKAppID。
-  - SECRETKEY：替换该变量值为上一步骤中在页面上看到的密钥。
-  - LICENSEURL：默认为 PLACEHOLDER ，请设置为实际的License Url信息；
-  - LICENSEURLKEY：默认为 PLACEHOLDER ，请设置为实际的License Key信息；
-  - PUSH_DOMAIN 中推流地址请设置为您的推流域名的 `CNAME`。
-  - PLAY_DOMAIN 中拉流地址请设置为您的播放域名的 `CNAME`。
-  - LIVE_URL_KEY：非必需，用于生成 txSecret 等鉴权信息。
-  
->!本文提到的生成 UserSig 的方案是在客户端代码中配置 SECRETKEY，该方法中 SECRETKEY 很容易被反编译逆向破解，一旦您的密钥泄露，攻击者就可以盗用您的腾讯云流量，因此**该方法仅适合本地跑通 Demo 和功能调试**。
->正确的 UserSig 签发方式是将 UserSig 的计算代码集成到您的服务端，并提供面向 App 的接口，在需要 UserSig 时由您的 App 向业务服务器发起请求获取动态 UserSig。更多详情请参见 [服务端生成 UserSig](https://cloud.tencent.com/document/product/647/17275#Server)。
+  - `SDKAPPID`: set it to the `SDKAppID` obtained in the previous step.
+  - `SECRETKEY`: set it to the secret key obtained in the previous step.
+  - `LICENSEURL`: a placeholder by default. Set it to the actual license URL.
+  - `LICENSEURLKEY`: a placeholder by default. Set it to the actual license key.
+  - `PUSH_DOMAIN`: set it to the configured publishing URL.
+  - `PLAY_DOMAIN`: set it to the configured playback URL.
+  - `LIVE_URL_KEY`: set it to the authentication key (if authentication configuration is enabled).
 
-### 编译运行
+>!The method for generating `UserSig` described in this document involves configuring `SECRETKEY` in client code. In this method, `SECRETKEY` may be easily decompiled and reversed, and if your key is disclosed, attackers can steal your Tencent Cloud traffic. Therefore, **this method is suitable only for the local execution and debugging of the demo**.
+>The correct `UserSig` distribution method is to integrate the calculation code of `UserSig` into your server and provide an application-oriented API. When `UserSig` is needed, your application can send a request to the business server for a dynamic `UserSig`. For more information, please see [How do I calculate UserSig on the server?](https://www.tencentcloud.com/document/product/1071/39471).
 
-使用 XCode（11.0及以上的版本）打开源码目录下的 MLVB-API-Example-OC.xcodeproj
+## Compiling and running the project
 
-> 上述流程并没有解答您的疑问，你可以[点击此处](https://wj.qq.com/s2/8393513/f442/)反馈，我们的**工程师妹子**会尽快处理！
+Open `MLVB-API-Example-OC.xcodeproj` in the source code directory with Xcode (11.0 or above).
 
-# 联系我们
-- [常见问题](https://cloud.tencent.com/document/product/454/7937)
-- [官网文档](https://cloud.tencent.com/document/product/454)
-- [API文档](https://liteav.sdk.qcloud.com/doc/api/zh-cn/group__V2TXLivePusher__ios.html#afc848d88fe99790b8c0988b8525dd4d9)
+## Contact Us
+- If you have questions, see [FAQs](https://www.tencentcloud.com/document/product/1071/39477).
 
+- To learn about how the MLVB SDK can be used in different scenarios, see [Sample Code](https://www.tencentcloud.com/document/product/1071).
+
+- For complete API documentation, see [SDK API Documentation](https://liteav.sdk.qcloud.com/doc/api/en/group__V2TXLivePusher__ios.html).
+
+- Communication & Feedback   
+Welcome to join our Telegram Group to communicate with our professional engineers! We are more than happy to hear from you~
+Click to join: [https://t.me/+EPk6TMZEZMM5OGY1](https://t.me/+EPk6TMZEZMM5OGY1)   
+Or scan the QR code   
+  <img src="https://qcloudimg.tencent-cloud.cn/raw/79cbfd13877704ff6e17f30de09002dd.jpg" width="300px">

@@ -1,14 +1,14 @@
-[简体中文](README.cn.md) | English
+简体中文 | [English](README.md)
 
 ThirdBeauty:
 
-1. Download the dependent third-party beauty SDK:https://www.faceunity.com/sdk/FaceUnity-SDK-iOS-v7.4.0.zip
-2. Import SDK
-    - After the download is complete and decompressed, drag the library folder into the project, and check Copy items if needed.
-    - libCNamaSDK.framework is a dynamic library, which needs to be in General->Framworks, Libraries, and Embedded Content
-       Add dependencies in , and set Embed to Embed&Sign, otherwise it will crash because the library cannot be found after running.
-3. Download FUTRTCDemo：https://github.com/Faceunity/FUTRTCDemo
-4. Put the following files in the FaceUnity directory in the FUTRTCDemo project:
+1. 下载依赖的第三方美颜SDK:https://www.faceunity.com/sdk/FaceUnity-SDK-iOS-v7.4.0.zip
+2. 导入SDK
+    - 下载完成并解压后将库文件夹拖入到工程中，并勾选上 Copy items if needed.
+    - libCNamaSDK.framework是动态库，需要在General->Framworks，Libraries,and Embedded Content
+      中添加依赖关系，并将Embed设置为Embed&Sign，否则会导致运行后因找不到库而崩.
+3. 下载FUTRTCDemo：https://github.com/Faceunity/FUTRTCDemo
+4. 将FUTRTCDemo工程中FaceUnity目录下的以下文件：
     - authpack.h
     - FUBeautyParam.h
     - FUBeautyParam.m
@@ -16,9 +16,9 @@ ThirdBeauty:
     - FUDateHandle.m
     - FUManager.h
     - FUManager.m
-    Drag into the project and check Copy items if needed.
-5. Certificate addition: Please contact Faceunity to obtain a test certificate for the certificate key in authpack.h and replace it here (please comment out or delete this error warning after replacement).
-6. Uncomment the following in the ThirdBeautyViewController.m file:
+    拖入到工程中，并勾选上 Copy items if needed.
+5. 证书添加：authpack.h中的证书key请联系Faceunity获取测试证书并替换到此处（替换后请注释掉或删除此错误警告）。
+6. 取消ThirdBeautyViewController.m文件中的以下注释：
 
     ```
     //#import "FUManager.h"
@@ -58,6 +58,6 @@ ThirdBeauty:
     ```
     //    [[FUManager shareManager] destoryItems];
     ```
-7. Command + R to run
+7. Command + R 运行
 
 
