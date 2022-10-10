@@ -15,13 +15,24 @@
  本文件展示如何通过移动直播SDK实现iOS系统上的画中画功能
  1、开启自定义渲染 API:[self.livePlayer enableObserveVideoFrame:YES pixelFormat:V2TXLivePixelFormatNV12 bufferType:V2TXLiveBufferTypePixelBuffer];
  2、需要开启SDK的后台解码能力 API:[_livePlayer setProperty:@"enableBackgroundDecoding" value:@(YES)];
- 3、使用系统 API创建画中画内容源: AVPictureInPictureControllerContentSource *contentSource = [[AVPictureInPictureControllerContentSource alloc] initWithSampleBufferDisplayLayer:self.sampleBufferDisplayLayer playbackDelegate:self];;
+ 3、使用系统 API创建画中画内容源: AVPictureInPictureControllerContentSource *contentSource = [[AVPictureInPictureControllerContentSource alloc] initWithSampleBufferDisplayLayer:self.sampleBufferDisplayLayer playbackDelegate:self];
  4、使用系统 API创建画中画控制器: [[AVPictureInPictureController alloc] initWithContentSource:contentSource];
  5、在SDK回调:- (void)onRenderVideoFrame:(id<V2TXLivePlayer>)player frame:(V2TXLiveVideoFrame *)videoFrame内将pixelBuffer转为SampleBuffer并交给AVSampleBufferDisplayLayer进行渲染;
  6、使用系统 API开启画中画功能：[self.pipViewController startPictureInPicture];
  */
 
-/// 画中画功能演示，示例拉流地址。
+/*
+ Picture-in-picture Example (supported by iOS15 and above)
+ MLVB APP picture-in-picture function code example:
+ This document shows how to implement the picture-in-picture function on the iOS system through the Mobile Live SDK
+ 1. Enable custom rendering API: [self.livePlayer enableObserveVideoFrame:YES pixelFormat:V2TXLivePixelFormatNV12 bufferType:V2TXLiveBufferTypePixelBuffer];
+ 2. The background decoding capability of the SDK needs to be enabled API:[_livePlayer setProperty:@"enableBackgroundDecoding" value:@(YES)];
+ 3. Use the system API to create a PIP content source: AVPictureInPictureControllerContentSource *contentSource = [[AVPictureInPictureControllerContentSource alloc] initWithSampleBufferDisplayLayer:self.sampleBufferDisplayLayer playbackDelegate:self];
+ 4. Use the system API to create a picture-in-picture controller: [[AVPictureInPictureController alloc] initWithContentSource:contentSource];
+ 5. In SDK callback:- (void)onRenderVideoFrame:(id<V2TXLivePlayer>)player frame:(V2TXLiveVideoFrame *)videoFrame convert pixelBuffer to SampleBuffer and hand it over to AVSampleBufferDisplayLayer for rendering;
+ 6. Use the system API to enable the picture-in-picture function: [self.pipViewController startPictureInPicture];
+ */
+
 static NSString * const G_DEFAULT_URL = @"http://liteavapp.qcloud.com/live/liteavdemoplayerstreamid.flv";
 
 @interface PictureInPictureViewController ()<
@@ -67,7 +78,6 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
     
     if (@available(iOS 15.0, *)) {
         if ([AVPictureInPictureController isPictureInPictureSupported]) {
-            //开启画中画后台声音权限
             NSError *error = nil;
             [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&error];
             [[AVAudioSession sharedInstance] setActive:YES error:nil];
@@ -89,7 +99,6 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
 }
 
 - (IBAction)onPictureInPictureButtonClick:(id)sender {
-    //在点击画中画按钮的时候 开启画中画
     if (self.pipViewController.isPictureInPictureActive) {
         [self.pipViewController stopPictureInPicture];
     } else {
@@ -97,14 +106,11 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
     }
 }
 
-//把pixelBuffer包装成samplebuffer送给displayLayer
 - (void)dispatchPixelBuffer:(CVPixelBufferRef)pixelBuffer {
     if (!pixelBuffer) {
         return;
     }
-    //不设置具体时间信息
     CMSampleTimingInfo timing = {kCMTimeInvalid, kCMTimeInvalid, kCMTimeInvalid};
-    //获取视频信息
     CMVideoFormatDescriptionRef videoInfo = NULL;
     OSStatus result = CMVideoFormatDescriptionCreateForImageBuffer(NULL, pixelBuffer, &videoInfo);
     NSParameterAssert(result == 0 && videoInfo != NULL);
@@ -195,7 +201,6 @@ failedToStartPictureInPictureWithError:(NSError *)error {
 - (void)pictureInPictureController:(AVPictureInPictureController *)pictureInPictureController
 restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:(void (^)(BOOL))completionHandler {
     NSLog(@"restoreUserInterfaceForPictureInPictureStopWithCompletionHandler");
-    // 执行回调的闭包
     completionHandler(true);
 }
 

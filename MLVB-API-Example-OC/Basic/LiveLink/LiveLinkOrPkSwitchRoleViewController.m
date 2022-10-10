@@ -8,11 +8,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *anchorButton;
 @property (weak, nonatomic) IBOutlet UIButton *audienceButton;
 @property (weak, nonatomic) IBOutlet UIButton *nextStepButton;
-/// 用户id
+
 @property (nonatomic, strong) NSString *userId;
-/// 是否是主播
+
 @property (nonatomic, assign) BOOL isAnchor;
-/// 页面titleStr
+
 @property (nonatomic, strong) NSString *titleStr;
 @end
 

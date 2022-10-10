@@ -47,7 +47,7 @@
 - (BOOL)textField:(UITextField *)textField
 shouldChangeCharactersInRange:(NSRange)range
 replacementString:(NSString *)string {
-   if (string.length > 0) { // 表示输入
+   if (string.length > 0) {
        self.button.enabled = YES;
        self.button.alpha = 1.0;
    }

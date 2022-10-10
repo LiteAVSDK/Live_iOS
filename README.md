@@ -19,6 +19,7 @@
 |  |  ├─ ThirdBeauty          // 演示第三方美颜示例代码
 |  |  ├─ LebAutoBitrate       // 演示快直播自适应播放代码
 |  |  ├─ HlsAutoBitrate       // 演示HLS自适应播放代码
+|  |  ├─ PictureInPicture     // 演示系统画中画示例代码
 |  
 ├─ SDK 
 │  ├─ LiteAVSDK_Smart.framework       // 如果您下载的是 Smart 专用 zip 包，解压后将出现此文件夹
