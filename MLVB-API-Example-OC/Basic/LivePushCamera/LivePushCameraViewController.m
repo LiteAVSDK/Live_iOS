@@ -124,7 +124,7 @@
         url = [URLUtils generateRtmpPushUrl:self.streamId];
     }
     
-    V2TXLiveCode code = [self.livePusher startPush:@"rtmp://139352.livepush.myqcloud.com/live/321321?txSecret=b85e1f20341d247788ea884366d591a5&txTime=632EB198"];
+    V2TXLiveCode code = [self.livePusher startPush:url];
     if (code != V2TXLIVE_OK) {
         [self.livePusher stopMicrophone];
         [self.livePusher stopCamera];
