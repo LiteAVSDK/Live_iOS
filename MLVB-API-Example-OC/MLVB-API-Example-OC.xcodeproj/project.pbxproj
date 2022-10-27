@@ -56,7 +56,6 @@
 		88167CE92685BF58001D99DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88167CE82685BF58001D99DC /* Foundation.framework */; };
 		88167CEA2685BF7B001D99DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8894457726282A3200193FAD /* UIKit.framework */; };
 		88167CEC2685BF97001D99DC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 88167CEB2685BF8E001D99DC /* libz.tbd */; };
-		882E4C3E28E696D300AE2A6A /* TXLiteAVSDK_Live.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 406AB157280048A600A99B81 /* TXLiteAVSDK_Live.framework */; };
 		8839C3BA2689AE29000FF58C /* LivePushScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8839C3B82689AE29000FF58C /* LivePushScreenViewController.m */; };
 		8839C3BB2689AE29000FF58C /* LivePushScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8839C3B92689AE29000FF58C /* LivePushScreenViewController.xib */; };
 		8839C3BD2689AF9B000FF58C /* TRTCBroadcastExtensionLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = 88999071268486EC00CBC983 /* TRTCBroadcastExtensionLauncher.m */; };
@@ -97,6 +96,8 @@
 		88FC7854268C8C2D00768C53 /* RTCPushAndPlayAnchorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88FC7852268C8C2D00768C53 /* RTCPushAndPlayAnchorViewController.xib */; };
 		88FC7859268C8F6E00768C53 /* RTCPushAndPlayAudienceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88FC7857268C8F6E00768C53 /* RTCPushAndPlayAudienceViewController.m */; };
 		88FC785A268C8F6E00768C53 /* RTCPushAndPlayAudienceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88FC7858268C8F6E00768C53 /* RTCPushAndPlayAudienceViewController.xib */; };
+		A088532631D1B73625341EE9 /* TXLiteAVSDK_Smart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29EDF4E66317391BACA0363 /* TXLiteAVSDK_Smart.framework */; };
+		A4B4F381DF1417DDF949A64D /* TXLiteAVSDK_Smart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29EDF4E66317391BACA0363 /* TXLiteAVSDK_Smart.framework */; };
 		C1937C64274F75F700F19E99 /* LivePkUserInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1937C63274F75F700F19E99 /* LivePkUserInputViewController.m */; };
 		C1937C93274F799200F19E99 /* LiveLinkOrPkStreamInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1937C84274F799200F19E99 /* LiveLinkOrPkStreamInputViewController.m */; };
 		C1937C94274F799200F19E99 /* LiveLinkOrPkSwitchRoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1937C85274F799200F19E99 /* LiveLinkOrPkSwitchRoleViewController.m */; };
@@ -153,7 +154,6 @@
 
 /* Begin PBXFileReference section */
 		400C520126A67EE30036AC40 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		406AB157280048A600A99B81 /* TXLiteAVSDK_Live.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TXLiteAVSDK_Live.framework; sourceTree = "<group>"; };
 		406AB158280048A600A99B81 /* TXLiteAVSDK_ReplayKitExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TXLiteAVSDK_ReplayKitExt.framework; sourceTree = "<group>"; };
 		406AB159280048A600A99B81 /* TXSoundTouch.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TXSoundTouch.xcframework; sourceTree = "<group>"; };
 		406AB15A280048A600A99B81 /* TXFFmpeg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TXFFmpeg.xcframework; sourceTree = "<group>"; };
@@ -288,6 +288,7 @@
 		C1937C92274F799200F19E99 /* LiveLinkAudienceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveLinkAudienceViewController.xib; sourceTree = "<group>"; };
 		C1937CBB275080CB00F19E99 /* LivePkFindPkUserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivePkFindPkUserController.m; sourceTree = "<group>"; };
 		C1937CBC275080CB00F19E99 /* LivePkFindPkUserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivePkFindPkUserController.h; sourceTree = "<group>"; };
+		C29EDF4E66317391BACA0363 /* TXLiteAVSDK_Smart.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TXLiteAVSDK_Smart.framework; path = ../SDK/TXLiteAVSDK_Smart.framework; sourceTree = "<group>"; };
 		EB147B13282B905000C0E2DC /* ThirdBeautyTencentEffectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdBeautyTencentEffectViewController.h; sourceTree = "<group>"; };
 		EB147B15282B907C00C0E2DC /* ThirdBeautyTencentEffectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdBeautyTencentEffectViewController.m; sourceTree = "<group>"; };
 		EB147B17282B908100C0E2DC /* ThirdBeautyTencentEffectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdBeautyTencentEffectViewController.xib; sourceTree = "<group>"; };
@@ -307,7 +308,6 @@
 				88167CEC2685BF97001D99DC /* libz.tbd in Frameworks */,
 				88167CEA2685BF7B001D99DC /* UIKit.framework in Frameworks */,
 				406AB161280048B500A99B81 /* TXSoundTouch.xcframework in Frameworks */,
-				882E4C3E28E696D300AE2A6A /* TXLiteAVSDK_Live.framework in Frameworks */,
 				4723A7BF26315F920094AC81 /* OpenGLES.framework in Frameworks */,
 				47ECB98C2626868400201FCB /* Accelerate.framework in Frameworks */,
 				4723A7C026315F9C0094AC81 /* Accelerate.framework in Frameworks */,
@@ -323,6 +323,7 @@
 				47ECB9892626867C00201FCB /* libc++.tbd in Frameworks */,
 				47748038283E21F900505C4C /* CoreServices.framework in Frameworks */,
 				4723A7C226315FA30094AC81 /* CoreMedia.framework in Frameworks */,
+				A4B4F381DF1417DDF949A64D /* TXLiteAVSDK_Smart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +339,7 @@
 				406AB16D2800490100A99B81 /* MetalKit.framework in Frameworks */,
 				406AB16B280048F400A99B81 /* TXLiteAVSDK_ReplayKitExt.framework in Frameworks */,
 				8894456B26282A3200193FAD /* ReplayKit.framework in Frameworks */,
+				A088532631D1B73625341EE9 /* TXLiteAVSDK_Smart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,9 +425,9 @@
 			isa = PBXGroup;
 			children = (
 				406AB15A280048A600A99B81 /* TXFFmpeg.xcframework */,
-				406AB157280048A600A99B81 /* TXLiteAVSDK_Live.framework */,
 				406AB158280048A600A99B81 /* TXLiteAVSDK_ReplayKitExt.framework */,
 				406AB159280048A600A99B81 /* TXSoundTouch.xcframework */,
+				C29EDF4E66317391BACA0363 /* TXLiteAVSDK_Smart.framework */,
 			);
 			name = SDK;
 			path = ../SDK;
