@@ -44,9 +44,9 @@
 2. [获取SDK的测试License](https://console.cloud.tencent.com/live/license) 
 
 ### 配置 Demo 工程文件
-
-1. 打开 Debug 目录下的 [GenerateTestUserSig.h](debug/GenerateTestUserSig.h) 文件。
-2. 配置`GenerateTestUserSig.h`文件中的参数：
+1. [下载 iOS MLVB SDK](https://liteav.sdk.qcloud.com/download/latest/TXLiteAVSDK_Live_iOS_latest.zip)到文档的上级SDK目录下并解压。
+2. 打开 Debug 目录下的 [GenerateTestUserSig.h](debug/GenerateTestUserSig.h) 文件。
+3. 配置`GenerateTestUserSig.h`文件中的参数：
 
   - SDKAPPID：替换该变量值为上一步骤中在页面上看到的 SDKAppID。
   - SECRETKEY：替换该变量值为上一步骤中在页面上看到的密钥。
