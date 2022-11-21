@@ -44,9 +44,9 @@ You have [signed up for a Tencent Cloud account](https://intl.cloud.tencent.com/
 2. [Obtain a trial license to use the SDK](https://console.intl.cloud.tencent.com/live/license). 
 
 ### Configuring demo project files
-
-1. Open the [GenerateTestUserSig.h](debug/GenerateTestUserSig.h) file in the `Debug` directory.
-2. Set parameters in `GenerateTestUserSig.h` as follows:
+1. [Download iOS MLVB SDK](https://liteav.sdk.qcloud.com/download/latest/TXLiteAVSDK_Live_iOS_latest.zip) to the upper-level SDK directory of the document and unzip it.
+2. Open the [GenerateTestUserSig.h](debug/GenerateTestUserSig.h) file in the `Debug` directory.
+3. Set parameters in `GenerateTestUserSig.h` as follows:
 
   - `SDKAPPID`: set it to the `SDKAppID` obtained in the previous step.
   - `SECRETKEY`: set it to the secret key obtained in the previous step.

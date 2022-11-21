@@ -31,9 +31,9 @@
 
 腾讯云 移动直播 SDK 基于 LiteAVSDK 统一框架设计和实现，该框架包含直播、点播、短视频、RTC、AI美颜在内的多项功能：
 
-- 如果您追求最小化体积增量，可以下载 Smart 版：[TXLiteAVSDK_Smart_Android_latest.zip](https://cloud.tencent.com/document/product/454/7873)
-- 如果您还需要 连麦PK 的功能，可以下载 Live 版：[TXLiteAVSDK_Live_Android_latest.zip](https://cloud.tencent.com/document/product/454/7873)
-- 如果您需要使用多个功能而不希望打包多个 SDK，可以下载专业版：[TXLiteAVSDK_Professional_Android_latest.zip](https://cloud.tencent.com/document/product/454/7873)
+- 如果您追求最小化体积增量，可以下载 Smart 版：[TXLiteAVSDK_Smart_iOS_latest.zip](https://cloud.tencent.com/document/product/454/7873)
+- 如果您还需要 连麦PK 的功能，可以下载 Live 版：[TXLiteAVSDK_Live_iOS_latest.zip](https://cloud.tencent.com/document/product/454/7873)
+- 如果您需要使用多个功能而不希望打包多个 SDK，可以下载专业版：[TXLiteAVSDK_Professional_iOS_latest.zip](https://cloud.tencent.com/document/product/454/7873)
 
 
 ## 相关文档链接
