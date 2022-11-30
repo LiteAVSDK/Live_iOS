@@ -85,6 +85,11 @@
                           @"title": localize(@"MLVB-API-Example.HlsAutoBitrate.title"),
                           @"desc": @"",
                           @"class": @"HlsAutoBitrateViewController"
+                      },
+                      @{
+                          @"title": localize(@"MLVB-API-Example.Home.TimeShift"),
+                          @"desc": @"",
+                          @"class": @"TimeShiftViewController"
                       }
 
               ]}];
