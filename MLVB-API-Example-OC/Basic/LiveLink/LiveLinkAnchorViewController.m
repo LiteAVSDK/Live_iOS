@@ -140,7 +140,7 @@
     
     V2TXLiveMixStream *subStream = [[V2TXLiveMixStream alloc] init];
     subStream.streamId = streamId;
-    subStream.userId = userId;
+    subStream.userId = streamId;
     subStream.height = 180;
     subStream.width = 100;
     subStream.x = 220;

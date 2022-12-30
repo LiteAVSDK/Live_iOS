@@ -32,6 +32,9 @@
 "MLVB-API-Example.Home.NotSupported" = "Picture-in-picture is not supported";
 "MLVB-API-Example.Home.Errormessage" = "Error message:";
 "MLVB-API-Example.Home.Ignorenullsamplebuffer" = "Ignore null samplebuffer";
+"MLVB-API-Example.Home.TimeShift" = "Time Shift";
+
+"MLVB-API-Example.Home.TimeShift.ResumeLive" = "Resume Live";
 
 "MLVB-API-Example.LivePushCamera.title" = "MLVB Publishing (Camera)";
 "MLVB-API-Example.LivePushCamera.streamIdInput" = "Stream ID";
