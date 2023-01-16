@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3907DE73291511920055D243 /* TimeShiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3907DE6E291511920055D243 /* TimeShiftViewController.m */; };
+		3907DE74291511920055D243 /* TimeShiftHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3907DE6F291511920055D243 /* TimeShiftHelper.m */; };
+		3907DE75291511920055D243 /* TimeShiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3907DE70291511920055D243 /* TimeShiftViewController.xib */; };
 		400C520226A67EE30036AC40 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400C520126A67EE30036AC40 /* AssetsLibrary.framework */; };
 		406AB15F280048B300A99B81 /* TXFFmpeg.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 406AB15A280048A600A99B81 /* TXFFmpeg.xcframework */; };
 		406AB160280048B300A99B81 /* TXFFmpeg.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 406AB15A280048A600A99B81 /* TXFFmpeg.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -22,6 +25,7 @@
 		406AB16E2800491700A99B81 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 406AB165280048C800A99B81 /* SystemConfiguration.framework */; };
 		406AB16F2800492000A99B81 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 406AB167280048D800A99B81 /* CoreTelephony.framework */; };
 		40D550EC26A6A9D800FE9F13 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D550EB26A6A9BF00FE9F13 /* libsqlite3.0.tbd */; };
+		4141A30B9ECFAEADE9C1282A /* TXLiteAVSDK_Smart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2ED49F368B94292E873187 /* TXLiteAVSDK_Smart.framework */; };
 		4723A7BF26315F920094AC81 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4723A7BE26315F920094AC81 /* OpenGLES.framework */; };
 		4723A7C026315F9C0094AC81 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ECB98B2626868400201FCB /* Accelerate.framework */; };
 		4723A7C226315FA30094AC81 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4723A7C126315FA30094AC81 /* CoreMedia.framework */; };
@@ -56,7 +60,6 @@
 		88167CE92685BF58001D99DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88167CE82685BF58001D99DC /* Foundation.framework */; };
 		88167CEA2685BF7B001D99DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8894457726282A3200193FAD /* UIKit.framework */; };
 		88167CEC2685BF97001D99DC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 88167CEB2685BF8E001D99DC /* libz.tbd */; };
-		882E4C3E28E696D300AE2A6A /* TXLiteAVSDK_Live.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 406AB157280048A600A99B81 /* TXLiteAVSDK_Live.framework */; };
 		8839C3BA2689AE29000FF58C /* LivePushScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8839C3B82689AE29000FF58C /* LivePushScreenViewController.m */; };
 		8839C3BB2689AE29000FF58C /* LivePushScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8839C3B92689AE29000FF58C /* LivePushScreenViewController.xib */; };
 		8839C3BD2689AF9B000FF58C /* TRTCBroadcastExtensionLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = 88999071268486EC00CBC983 /* TRTCBroadcastExtensionLauncher.m */; };
@@ -97,6 +100,7 @@
 		88FC7854268C8C2D00768C53 /* RTCPushAndPlayAnchorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88FC7852268C8C2D00768C53 /* RTCPushAndPlayAnchorViewController.xib */; };
 		88FC7859268C8F6E00768C53 /* RTCPushAndPlayAudienceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88FC7857268C8F6E00768C53 /* RTCPushAndPlayAudienceViewController.m */; };
 		88FC785A268C8F6E00768C53 /* RTCPushAndPlayAudienceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88FC7858268C8F6E00768C53 /* RTCPushAndPlayAudienceViewController.xib */; };
+		BEC909003E914CB96D6A9E10 /* TXLiteAVSDK_Smart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2ED49F368B94292E873187 /* TXLiteAVSDK_Smart.framework */; };
 		C1937C64274F75F700F19E99 /* LivePkUserInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1937C63274F75F700F19E99 /* LivePkUserInputViewController.m */; };
 		C1937C93274F799200F19E99 /* LiveLinkOrPkStreamInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1937C84274F799200F19E99 /* LiveLinkOrPkStreamInputViewController.m */; };
 		C1937C94274F799200F19E99 /* LiveLinkOrPkSwitchRoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1937C85274F799200F19E99 /* LiveLinkOrPkSwitchRoleViewController.m */; };
@@ -152,8 +156,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3907DE6E291511920055D243 /* TimeShiftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeShiftViewController.m; sourceTree = "<group>"; };
+		3907DE6F291511920055D243 /* TimeShiftHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeShiftHelper.m; sourceTree = "<group>"; };
+		3907DE70291511920055D243 /* TimeShiftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeShiftViewController.xib; sourceTree = "<group>"; };
+		3907DE71291511920055D243 /* TimeShiftHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeShiftHelper.h; sourceTree = "<group>"; };
+		3907DE72291511920055D243 /* TimeShiftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeShiftViewController.h; sourceTree = "<group>"; };
 		400C520126A67EE30036AC40 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		406AB157280048A600A99B81 /* TXLiteAVSDK_Live.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TXLiteAVSDK_Live.framework; sourceTree = "<group>"; };
 		406AB158280048A600A99B81 /* TXLiteAVSDK_ReplayKitExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TXLiteAVSDK_ReplayKitExt.framework; sourceTree = "<group>"; };
 		406AB159280048A600A99B81 /* TXSoundTouch.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TXSoundTouch.xcframework; sourceTree = "<group>"; };
 		406AB15A280048A600A99B81 /* TXFFmpeg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TXFFmpeg.xcframework; sourceTree = "<group>"; };
@@ -288,6 +296,7 @@
 		C1937C92274F799200F19E99 /* LiveLinkAudienceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveLinkAudienceViewController.xib; sourceTree = "<group>"; };
 		C1937CBB275080CB00F19E99 /* LivePkFindPkUserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivePkFindPkUserController.m; sourceTree = "<group>"; };
 		C1937CBC275080CB00F19E99 /* LivePkFindPkUserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivePkFindPkUserController.h; sourceTree = "<group>"; };
+		CC2ED49F368B94292E873187 /* TXLiteAVSDK_Smart.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TXLiteAVSDK_Smart.framework; path = ../SDK/TXLiteAVSDK_Smart.framework; sourceTree = "<group>"; };
 		EB147B13282B905000C0E2DC /* ThirdBeautyTencentEffectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdBeautyTencentEffectViewController.h; sourceTree = "<group>"; };
 		EB147B15282B907C00C0E2DC /* ThirdBeautyTencentEffectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdBeautyTencentEffectViewController.m; sourceTree = "<group>"; };
 		EB147B17282B908100C0E2DC /* ThirdBeautyTencentEffectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdBeautyTencentEffectViewController.xib; sourceTree = "<group>"; };
@@ -307,7 +316,6 @@
 				88167CEC2685BF97001D99DC /* libz.tbd in Frameworks */,
 				88167CEA2685BF7B001D99DC /* UIKit.framework in Frameworks */,
 				406AB161280048B500A99B81 /* TXSoundTouch.xcframework in Frameworks */,
-				882E4C3E28E696D300AE2A6A /* TXLiteAVSDK_Live.framework in Frameworks */,
 				4723A7BF26315F920094AC81 /* OpenGLES.framework in Frameworks */,
 				47ECB98C2626868400201FCB /* Accelerate.framework in Frameworks */,
 				4723A7C026315F9C0094AC81 /* Accelerate.framework in Frameworks */,
@@ -323,6 +331,7 @@
 				47ECB9892626867C00201FCB /* libc++.tbd in Frameworks */,
 				47748038283E21F900505C4C /* CoreServices.framework in Frameworks */,
 				4723A7C226315FA30094AC81 /* CoreMedia.framework in Frameworks */,
+				BEC909003E914CB96D6A9E10 /* TXLiteAVSDK_Smart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,12 +347,25 @@
 				406AB16D2800490100A99B81 /* MetalKit.framework in Frameworks */,
 				406AB16B280048F400A99B81 /* TXLiteAVSDK_ReplayKitExt.framework in Frameworks */,
 				8894456B26282A3200193FAD /* ReplayKit.framework in Frameworks */,
+				4141A30B9ECFAEADE9C1282A /* TXLiteAVSDK_Smart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3907DE6D291511920055D243 /* TimeShiftPlay */ = {
+			isa = PBXGroup;
+			children = (
+				3907DE71291511920055D243 /* TimeShiftHelper.h */,
+				3907DE6F291511920055D243 /* TimeShiftHelper.m */,
+				3907DE72291511920055D243 /* TimeShiftViewController.h */,
+				3907DE6E291511920055D243 /* TimeShiftViewController.m */,
+				3907DE70291511920055D243 /* TimeShiftViewController.xib */,
+			);
+			path = TimeShiftPlay;
+			sourceTree = "<group>";
+		};
 		477EC95A26268B09007AAC4F /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,9 +445,9 @@
 			isa = PBXGroup;
 			children = (
 				406AB15A280048A600A99B81 /* TXFFmpeg.xcframework */,
-				406AB157280048A600A99B81 /* TXLiteAVSDK_Live.framework */,
 				406AB158280048A600A99B81 /* TXLiteAVSDK_ReplayKitExt.framework */,
 				406AB159280048A600A99B81 /* TXSoundTouch.xcframework */,
+				CC2ED49F368B94292E873187 /* TXLiteAVSDK_Smart.framework */,
 			);
 			name = SDK;
 			path = ../SDK;
@@ -446,6 +468,7 @@
 				8873802A28E18C8B00B0479E /* HlsAutoBitrate */,
 				47F149E0286BF3A600781688 /* PictureInPicture */,
 				47E0729D2636A6C80027D05E /* CustomVideoCapture */,
+				3907DE6D291511920055D243 /* TimeShiftPlay */,
 				47E072AD2636A6C80027D05E /* ThirdBeauty */,
 				88FC7846268C674800768C53 /* RTCPushAndPlay */,
 			);
@@ -813,6 +836,7 @@
 				477EC9B626269568007AAC4F /* HomeTableViewCell.xib in Resources */,
 				C1937C98274F799200F19E99 /* LiveLinkAnchorViewController.xib in Resources */,
 				EB147B18282B908100C0E2DC /* ThirdBeautyTencentEffectViewController.xib in Resources */,
+				3907DE75291511920055D243 /* TimeShiftViewController.xib in Resources */,
 				477EC97C26268B0A007AAC4F /* LaunchScreen.storyboard in Resources */,
 				88167CC62684AC91001D99DC /* LivePushCameraViewController.xib in Resources */,
 				88C4C06C268C49FD00FBB698 /* ThirdBeautyFaceunityViewController.xib in Resources */,
@@ -853,6 +877,7 @@
 				88167CB3268488C2001D99DC /* LivePushCameraEnterViewController.m in Sources */,
 				88FC784A268C678A00768C53 /* RTCPushAndPlayEnterViewController.m in Sources */,
 				8873802328DCA6FF00B0479E /* LebPlayEnterViewController.m in Sources */,
+				3907DE74291511920055D243 /* TimeShiftHelper.m in Sources */,
 				88AB3E51268A008C00A75212 /* URLUtils.m in Sources */,
 				880B3C4A2624411B002683FB /* GenerateTestUserSig.m in Sources */,
 				885A56472689ABB500D9D55F /* LivePushScreenEnterViewController.m in Sources */,
@@ -861,6 +886,7 @@
 				47F149E4286BF3E900781688 /* PictureInPictureViewController.m in Sources */,
 				8839C3D52689BEF5000FF58C /* LivePlayViewController.m in Sources */,
 				C1937CBD275080CB00F19E99 /* LivePkFindPkUserController.m in Sources */,
+				3907DE73291511920055D243 /* TimeShiftViewController.m in Sources */,
 				477EC97F26268B0A007AAC4F /* AppDelegate.m in Sources */,
 				4723A8902631666E0094AC81 /* NSString+Common.m in Sources */,
 				8873801D28D9E5C400B0479E /* LebAutoBitrateViewController.m in Sources */,
