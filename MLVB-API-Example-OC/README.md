@@ -21,6 +21,7 @@ This demo covers the following features (click to view the details of a feature)
   - [Picture In Picture](./Advanced/PictureInPicture)
   - [Webrtc Auto Bitrate](./Advanced/LebAutoBitrate)
   - [HLS Auto Bitrate](./Advanced/HlsAutoBitrate)
+  - [Time Shift](./Advanced/TimeShift)
 
 ## Environment Requirements
 - Xcode 11.0 or above
