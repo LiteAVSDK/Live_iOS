@@ -44,7 +44,7 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
 @property (nonatomic, strong) AVPictureInPictureController *pipViewController;
 @property (nonatomic, strong) AVSampleBufferDisplayLayer *sampleBufferDisplayLayer;
 @property (weak, nonatomic) IBOutlet UIButton *pictureInPictureButton;
-
+@property (nonatomic, strong) UIView *playView;
 @end
 
 @implementation PictureInPictureViewController
@@ -59,6 +59,14 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
     return _livePlayer;
 }
 
+- (UIView *)playView {
+    if (!_playView) {
+        _playView = [[UIView alloc] initWithFrame:CGRectZero];
+        _playView.backgroundColor = UIColor.redColor;
+    }
+    return _playView;
+}
+
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     self.pipViewController = nil;
@@ -71,9 +79,14 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.blackColor;
     
+    self.playView.frame = UIApplication.sharedApplication.keyWindow.bounds;
+    [self.view insertSubview:self.playView belowSubview:self.pictureInPictureButton];
+    
     self.pictureInPictureButton.layer.cornerRadius = 8;
     [self.pictureInPictureButton setTitle:localize(@"MLVB-API-Example.Home.OpenPictureInPicture") forState:UIControlStateNormal];
     
+    [self.livePlayer setRenderView:self.playView];
+    [self.livePlayer setRenderFillMode:V2TXLiveFillModeFit];
     [self.livePlayer startLivePlay:G_DEFAULT_URL];
     
     if (@available(iOS 15.0, *)) {
@@ -161,18 +174,13 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
 - (void)setupSampleBufferDisplayLayer {
     if (!self.sampleBufferDisplayLayer) {
         self.sampleBufferDisplayLayer = [[AVSampleBufferDisplayLayer alloc] init];
-        self.sampleBufferDisplayLayer.frame = UIApplication.sharedApplication.keyWindow.bounds;
+        self.sampleBufferDisplayLayer.frame = self.playView.bounds;
         self.sampleBufferDisplayLayer.position = CGPointMake(CGRectGetMidX(self.sampleBufferDisplayLayer.bounds),
                                                              CGRectGetMidY(self.sampleBufferDisplayLayer.bounds));
         self.sampleBufferDisplayLayer.videoGravity = AVLayerVideoGravityResizeAspect;
         self.sampleBufferDisplayLayer.opaque = YES;
+        self.sampleBufferDisplayLayer.opacity = 0;
         [self.view.layer addSublayer:self.sampleBufferDisplayLayer];
-    } else {
-        [CATransaction begin];
-        [CATransaction setDisableActions:YES];
-        self.sampleBufferDisplayLayer.frame = self.view.bounds;
-        self.sampleBufferDisplayLayer.position = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
-        [CATransaction commit];
     }
 }
 
@@ -186,11 +194,13 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
 #pragma mark - AVPictureInPictureControllerDelegate
 - (void)pictureInPictureControllerWillStartPictureInPicture:(AVPictureInPictureController *)pictureInPictureController {
     NSLog(@"pictureInPictureControllerWillStartPictureInPicture");
+    self.playView.alpha = 0;
 }
 
 - (void)pictureInPictureControllerDidStartPictureInPicture:(AVPictureInPictureController *)pictureInPictureController {
     [self.pictureInPictureButton setTitle:localize(@"MLVB-API-Example.Home.ClosePictureInPicture") forState:UIControlStateNormal];
     NSLog(@"pictureInPictureControllerDidStartPictureInPicture");
+    self.sampleBufferDisplayLayer.opacity = 1;
 }
 
 - (void)pictureInPictureController:(AVPictureInPictureController *)pictureInPictureController
@@ -206,11 +216,13 @@ restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:(void (^)(BOOL)
 
 - (void)pictureInPictureControllerWillStopPictureInPicture:(AVPictureInPictureController *)pictureInPictureController {
     NSLog(@"pictureInPictureControllerWillStopPictureInPicture");
+    self.sampleBufferDisplayLayer.opacity = 0;
 }
 
 - (void)pictureInPictureControllerDidStopPictureInPicture:(AVPictureInPictureController *)pictureInPictureController {
     [self.pictureInPictureButton setTitle:localize(@"MLVB-API-Example.Home.OpenPictureInPicture") forState:UIControlStateNormal];
     NSLog(@"pictureInPictureControllerDidStopPictureInPicture");
+    self.playView.alpha = 1;
 }
 
 
