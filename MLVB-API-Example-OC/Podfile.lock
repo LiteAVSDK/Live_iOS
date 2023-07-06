@@ -1,0 +1,20 @@
+PODS:
+  - TXLiteAVSDK_Live (11.1.14143):
+    - TXLiteAVSDK_Live/Live (= 11.1.14143)
+  - TXLiteAVSDK_Live/Live (11.1.14143)
+  - TXLiteAVSDK_Live/ReplayKitExt (11.1.14143)
+
+DEPENDENCIES:
+  - TXLiteAVSDK_Live
+  - TXLiteAVSDK_Live/ReplayKitExt
+
+SPEC REPOS:
+  trunk:
+    - TXLiteAVSDK_Live
+
+SPEC CHECKSUMS:
+  TXLiteAVSDK_Live: 4db83d9a81c4ce4fc971f23910ef3c75fd53acad
+
+PODFILE CHECKSUM: e8d561411f877ec8c7a07028f9c887ccd31a3df0
+
+COCOAPODS: 1.12.1
