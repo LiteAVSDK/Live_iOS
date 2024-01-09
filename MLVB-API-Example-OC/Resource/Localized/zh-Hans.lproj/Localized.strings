@@ -30,6 +30,8 @@
 "MLVB-API-Example.Home.PictureInPicture" = "画中画功能";
 "MLVB-API-Example.Home.OpenPictureInPicture" = "开启画中画功能";
 "MLVB-API-Example.Home.ClosePictureInPicture" = "关闭画中画功能";
+"MLVB-API-Example.Home.pause" = "暂停";
+"MLVB-API-Example.Home.resume" = "恢复";
 "MLVB-API-Example.Home.PermissionFailed" = "开启权限失败";
 "MLVB-API-Example.Home.NotSupported" = "不支持画中画模式";
 "MLVB-API-Example.Home.Errormessage" = "错误信息：";

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PictureInPictureViewController">
             <connections>
+                <outlet property="pauseButton" destination="wix-6b-Cd8" id="Cir-8q-sW9"/>
                 <outlet property="pictureInPictureButton" destination="aPM-Qz-tdj" id="6Et-Z0-Nad"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,31 +21,65 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPM-Qz-tdj">
-                    <rect key="frame" x="147" y="762" width="120" height="40"/>
-                    <color key="backgroundColor" systemColor="linkColor"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFg-zj-UK4">
+                    <rect key="frame" x="77" y="782" width="260" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPM-Qz-tdj">
+                            <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
+                            <color key="backgroundColor" systemColor="linkColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="36U-SY-aFL"/>
+                                <constraint firstAttribute="height" constant="40" id="4Tv-6Z-pxp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="tintColor" red="0.1176470588" green="0.1176470588" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onPictureInPictureButtonClick:" destination="-1" eventType="touchUpInside" id="5zR-vP-n7M"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wix-6b-Cd8">
+                            <rect key="frame" x="140" y="0.0" width="120" height="40"/>
+                            <color key="backgroundColor" systemColor="linkColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="E6l-Ky-yjP"/>
+                                <constraint firstAttribute="width" constant="120" id="tOk-bL-rZW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="tintColor" red="0.1176470588" green="0.1176470588" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="pauseButtonClick:" destination="-1" eventType="touchUpInside" id="B71-OZ-8YT"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="A54-Ec-CfO"/>
-                        <constraint firstAttribute="width" constant="120" id="STq-Rf-ibp"/>
+                        <constraint firstAttribute="trailing" secondItem="wix-6b-Cd8" secondAttribute="trailing" id="6Cg-zP-iR1"/>
+                        <constraint firstItem="wix-6b-Cd8" firstAttribute="leading" secondItem="aPM-Qz-tdj" secondAttribute="trailing" constant="20" id="BiE-81-EtT"/>
+                        <constraint firstAttribute="bottom" secondItem="wix-6b-Cd8" secondAttribute="bottom" id="KZt-og-THn"/>
+                        <constraint firstItem="aPM-Qz-tdj" firstAttribute="leading" secondItem="XFg-zj-UK4" secondAttribute="leading" id="U7t-hZ-OA6"/>
+                        <constraint firstItem="aPM-Qz-tdj" firstAttribute="top" secondItem="XFg-zj-UK4" secondAttribute="top" id="efe-Iw-Hdf"/>
+                        <constraint firstAttribute="bottom" secondItem="aPM-Qz-tdj" secondAttribute="bottom" id="f9Y-Qu-m7e"/>
+                        <constraint firstItem="wix-6b-Cd8" firstAttribute="top" secondItem="XFg-zj-UK4" secondAttribute="top" id="z9x-Co-hDD"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="tintColor" red="0.1176470588" green="0.1176470588" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Button"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="onPictureInPictureButtonClick:" destination="-1" eventType="touchUpInside" id="5zR-vP-n7M"/>
-                    </connections>
-                </button>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="aPM-Qz-tdj" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="P0u-9K-xbK"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="aPM-Qz-tdj" secondAttribute="bottom" constant="60" id="xYy-4q-Uto"/>
+                <constraint firstItem="XFg-zj-UK4" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="h6O-bH-faQ"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="XFg-zj-UK4" secondAttribute="bottom" constant="40" id="x9B-ob-yU8"/>
             </constraints>
             <point key="canvasLocation" x="139" y="154"/>
         </view>
