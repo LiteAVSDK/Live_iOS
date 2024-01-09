@@ -8,6 +8,7 @@
 
 #import "PictureInPictureViewController.h"
 #import <AVKit/AVKit.h>
+#import "PictureInPictureView.h"
 
 /*
  画中画功能（iOS15及以上支持）
@@ -42,13 +43,17 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
 
 @property (nonatomic, strong) V2TXLivePlayer *livePlayer;
 @property (nonatomic, strong) AVPictureInPictureController *pipViewController;
-@property (nonatomic, strong) AVSampleBufferDisplayLayer *sampleBufferDisplayLayer;
-@property (weak, nonatomic) IBOutlet UIButton *pictureInPictureButton;
-@property (nonatomic, strong) UIView *playView;
+@property (nonatomic, strong) AVSampleBufferDisplayLayer *displayLayer;
+@property (nonatomic, strong) PictureInPictureView *displayView;
+@property (nonatomic, weak) IBOutlet UIButton *pictureInPictureButton;
+@property (weak, nonatomic) IBOutlet UIButton *pauseButton;
+@property (nonatomic, assign) BOOL videoMuted;
+@property (nonatomic, assign) BOOL playbackPaused;
 @end
 
 @implementation PictureInPictureViewController
 
+#pragma mark - lazy load
 - (V2TXLivePlayer *)livePlayer {
     if (!_livePlayer) {
         _livePlayer = [[V2TXLivePlayer alloc] init];
@@ -59,36 +64,22 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
     return _livePlayer;
 }
 
-- (UIView *)playView {
-    if (!_playView) {
-        _playView = [[UIView alloc] initWithFrame:CGRectZero];
-        _playView.backgroundColor = UIColor.redColor;
-    }
-    return _playView;
+- (void)setupDisplayView {
+    self.displayView = [[PictureInPictureView alloc] initWithFrame:UIApplication.sharedApplication.keyWindow.bounds];
+    self.displayView.userInteractionEnabled = NO;
+    self.displayLayer = (AVSampleBufferDisplayLayer *)self.displayView.layer;
+    self.displayLayer.opaque = YES;
+    self.displayLayer.videoGravity = AVLayerVideoGravityResizeAspect;
+    [self.view insertSubview:self.displayView belowSubview:self.pictureInPictureButton];
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    self.pipViewController = nil;
-    [self.sampleBufferDisplayLayer removeFromSuperlayer];
-    [self.livePlayer stopPlay];
-    self.livePlayer = nil;
+- (void)resetDisplayView {
+    [self.displayView removeFromSuperview];
+    [self.displayLayer stopRequestingMediaData];
+    self.displayView = nil;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.view.backgroundColor = UIColor.blackColor;
-    
-    self.playView.frame = UIApplication.sharedApplication.keyWindow.bounds;
-    [self.view insertSubview:self.playView belowSubview:self.pictureInPictureButton];
-    
-    self.pictureInPictureButton.layer.cornerRadius = 8;
-    [self.pictureInPictureButton setTitle:localize(@"MLVB-API-Example.Home.OpenPictureInPicture") forState:UIControlStateNormal];
-    
-    [self.livePlayer setRenderView:self.playView];
-    [self.livePlayer setRenderFillMode:V2TXLiveFillModeFit];
-    [self.livePlayer startLivePlay:G_DEFAULT_URL];
-    
+- (void)setupPipController {
     if (@available(iOS 15.0, *)) {
         if ([AVPictureInPictureController isPictureInPictureSupported]) {
             NSError *error = nil;
@@ -97,18 +88,52 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
             if (error) {
                 NSLog(@"%@%@",localize(@"MLVB-API-Example.Home.PermissionFailed"),error);
             }
-            [self setupSampleBufferDisplayLayer];
-            [self.view.layer addSublayer:self.sampleBufferDisplayLayer];
             AVPictureInPictureControllerContentSource *contentSource = [[AVPictureInPictureControllerContentSource alloc]
-                                                                        initWithSampleBufferDisplayLayer:self.sampleBufferDisplayLayer
+                                                                        initWithSampleBufferDisplayLayer:self.displayLayer
                                                                         playbackDelegate:self];
             self.pipViewController = [[AVPictureInPictureController alloc] initWithContentSource:contentSource];
             self.pipViewController.delegate = self;
             self.pipViewController.canStartPictureInPictureAutomaticallyFromInline = YES;
+            self.pipViewController.requiresLinearPlayback = YES;  // 设置画中画小窗中是否有快进快退按钮
         } else {
             NSLog(@"%@",localize(@"MLVB-API-Example.Home.NotSupported"));
         }
     }
+}
+
+- (void)resetPipController {
+    if (@available(iOS 15.0, *)) {
+        [self.pipViewController stopPictureInPicture];
+        [self.pipViewController invalidatePlaybackState];
+        self.pipViewController = nil;
+    }
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [self resetPipController];
+    [self resetDisplayView];
+    [self.livePlayer stopPlay];
+    self.livePlayer = nil;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = UIColor.blackColor;
+    self.pictureInPictureButton.layer.cornerRadius = 8;
+    [self.pictureInPictureButton setTitle:localize(@"MLVB-API-Example.Home.OpenPictureInPicture") forState:UIControlStateNormal];
+    [self.pauseButton setTitle:localize(@"MLVB-API-Example.Home.pause") forState:UIControlStateNormal];
+    
+    [self.livePlayer setRenderFillMode:V2TXLiveFillModeFit];
+    [self.livePlayer startLivePlay:G_DEFAULT_URL];
+    self.videoMuted = NO;
+    self.playbackPaused = NO;
+    [self setupDisplayView];
+    [self setupPipController];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onAppBecomeActive:)
+                                                 name:UIApplicationDidBecomeActiveNotification
+                                               object:nil];
 }
 
 - (IBAction)onPictureInPictureButtonClick:(id)sender {
@@ -116,6 +141,20 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
         [self.pipViewController stopPictureInPicture];
     } else {
         [self.pipViewController startPictureInPicture];
+    }
+}
+
+- (IBAction)pauseButtonClick:(id)sender {
+    if (self.videoMuted) {
+        [self.livePlayer resumeVideo];
+        [self.livePlayer resumeAudio];
+        self.videoMuted = NO;
+        [self.pauseButton setTitle:localize(@"MLVB-API-Example.Home.pause") forState:UIControlStateNormal];
+    } else {
+        [self.livePlayer pauseVideo];
+        [self.livePlayer pauseAudio];
+        self.videoMuted = YES;
+        [self.pauseButton setTitle:localize(@"MLVB-API-Example.Home.resume") forState:UIControlStateNormal];
     }
 }
 
@@ -135,52 +174,53 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
     CFArrayRef attachments = CMSampleBufferGetSampleAttachmentsArray(sampleBuffer, YES);
     CFMutableDictionaryRef dict = (CFMutableDictionaryRef)CFArrayGetValueAtIndex(attachments, 0);
     CFDictionarySetValue(dict, kCMSampleAttachmentKey_DisplayImmediately, kCFBooleanTrue);
-    [self enqueueSampleBuffer:sampleBuffer toLayer:self.sampleBufferDisplayLayer];
+    [self enqueueSampleBuffer:sampleBuffer toLayer:self.displayLayer];
     CFRelease(sampleBuffer);
 }
 
 - (void)enqueueSampleBuffer:(CMSampleBufferRef)sampleBuffer toLayer:(AVSampleBufferDisplayLayer*)layer {
-    if (sampleBuffer) {
-        CFRetain(sampleBuffer);
-        [layer enqueueSampleBuffer:sampleBuffer];
-        CFRelease(sampleBuffer);
+    if (!sampleBuffer || !layer.readyForMoreMediaData) {
+        NSLog(@"%@",localize(@"MLVB-API-Example.Home.Ignorenullsamplebuffer"));
+        return;
+    }
+    if (@available(iOS 16.0, *)) {
         if (layer.status == AVQueuedSampleBufferRenderingStatusFailed) {
             NSLog(@"%@%@",localize(@"MLVB-API-Example.Home.Errormessage"),layer.error);
             [layer flush];
-            if (-11847 == layer.error.code) {
-                [self rebuildSampleBufferDisplayLayer];
-            }
         }
     } else {
-        NSLog(@"%@",localize(@"MLVB-API-Example.Home.Ignorenullsamplebuffer"));
+        // Memory overflow occurs in oss running iOS16 or later, and you must forcibly flush the memory
+        [layer flush];
+    }
+    [layer enqueueSampleBuffer:sampleBuffer];
+}
+
+- (void)refreshPlaybackState {
+    if (@available(iOS 15.0, *)) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"refreshPlaybackState");
+            [self.pipViewController invalidatePlaybackState];
+        });
     }
 }
 
-- (void)rebuildSampleBufferDisplayLayer {
-    @synchronized(self) {
-        [self teardownSampleBufferDisplayLayer];
-        [self setupSampleBufferDisplayLayer];
-    }
+- (void)muteVideo:(BOOL)mute {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.videoMuted = mute;
+        [self refreshPlaybackState];
+    });
 }
-  
-- (void)teardownSampleBufferDisplayLayer {
-    if (self.sampleBufferDisplayLayer) {
-        [self.sampleBufferDisplayLayer stopRequestingMediaData];
-        [self.sampleBufferDisplayLayer removeFromSuperlayer];
-        self.sampleBufferDisplayLayer = nil;
-    }
-}
-  
-- (void)setupSampleBufferDisplayLayer {
-    if (!self.sampleBufferDisplayLayer) {
-        self.sampleBufferDisplayLayer = [[AVSampleBufferDisplayLayer alloc] init];
-        self.sampleBufferDisplayLayer.frame = self.playView.bounds;
-        self.sampleBufferDisplayLayer.position = CGPointMake(CGRectGetMidX(self.sampleBufferDisplayLayer.bounds),
-                                                             CGRectGetMidY(self.sampleBufferDisplayLayer.bounds));
-        self.sampleBufferDisplayLayer.videoGravity = AVLayerVideoGravityResizeAspect;
-        self.sampleBufferDisplayLayer.opaque = YES;
-        self.sampleBufferDisplayLayer.opacity = 0;
-        [self.view.layer addSublayer:self.sampleBufferDisplayLayer];
+
+#pragma mark - AppState Event
+- (void)onAppBecomeActive:(id)sender {
+    if (@available(iOS 15.0, *)) {
+        if (!self.pipViewController) {
+            return;
+        }
+        self.playbackPaused = NO;
+        [self.pipViewController stopPictureInPicture];
+        [self.pipViewController invalidatePlaybackState];
+        NSLog(@"onAppBecomeActive");
     }
 }
 
@@ -194,13 +234,12 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
 #pragma mark - AVPictureInPictureControllerDelegate
 - (void)pictureInPictureControllerWillStartPictureInPicture:(AVPictureInPictureController *)pictureInPictureController {
     NSLog(@"pictureInPictureControllerWillStartPictureInPicture");
-    self.playView.alpha = 0;
+    self.playbackPaused = NO;
 }
 
 - (void)pictureInPictureControllerDidStartPictureInPicture:(AVPictureInPictureController *)pictureInPictureController {
     [self.pictureInPictureButton setTitle:localize(@"MLVB-API-Example.Home.ClosePictureInPicture") forState:UIControlStateNormal];
     NSLog(@"pictureInPictureControllerDidStartPictureInPicture");
-    self.sampleBufferDisplayLayer.opacity = 1;
 }
 
 - (void)pictureInPictureController:(AVPictureInPictureController *)pictureInPictureController
@@ -216,25 +255,27 @@ restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:(void (^)(BOOL)
 
 - (void)pictureInPictureControllerWillStopPictureInPicture:(AVPictureInPictureController *)pictureInPictureController {
     NSLog(@"pictureInPictureControllerWillStopPictureInPicture");
-    self.sampleBufferDisplayLayer.opacity = 0;
 }
 
 - (void)pictureInPictureControllerDidStopPictureInPicture:(AVPictureInPictureController *)pictureInPictureController {
     [self.pictureInPictureButton setTitle:localize(@"MLVB-API-Example.Home.OpenPictureInPicture") forState:UIControlStateNormal];
     NSLog(@"pictureInPictureControllerDidStopPictureInPicture");
-    self.playView.alpha = 1;
 }
 
 
 #pragma mark - AVPictureInPictureSampleBufferPlaybackDelegate
 - (BOOL)pictureInPictureControllerIsPlaybackPaused:(nonnull AVPictureInPictureController *)pictureInPictureController {
     NSLog(@"pictureInPictureControllerIsPlaybackPaused");
+    if (self.videoMuted || self.playbackPaused) {
+        return YES;
+    }
     return NO;
 }
 
 - (CMTimeRange)pictureInPictureControllerTimeRangeForPlayback:(AVPictureInPictureController *)pictureInPictureController {
     NSLog(@"pictureInPictureControllerTimeRangeForPlayback");
-    return  CMTimeRangeMake(kCMTimeZero, kCMTimePositiveInfinity); // for live streaming
+    // Fix CPU spikes
+    return CMTimeRangeMake(kCMTimeZero, CMTimeMake(315360000000LL, 1000));
 }
 
 - (void)pictureInPictureController:(AVPictureInPictureController *)pictureInPictureController
@@ -244,6 +285,19 @@ restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:(void (^)(BOOL)
 
 - (void)pictureInPictureController:(AVPictureInPictureController *)pictureInPictureController setPlaying:(BOOL)playing {
     NSLog(@"setPlaying");
+    if (playing) {
+        [self.livePlayer resumeAudio];
+        [self.livePlayer resumeVideo];
+        [self.pauseButton setTitle:localize(@"MLVB-API-Example.Home.pause") forState:UIControlStateNormal];
+    } else {
+        [self.livePlayer pauseAudio];
+        [self.livePlayer pauseVideo];
+        [self.pauseButton setTitle:localize(@"MLVB-API-Example.Home.resume") forState:UIControlStateNormal];
+    }
+    self.playbackPaused = !playing;
+    if (@available(iOS 15.0, *)) {
+        [self.pipViewController invalidatePlaybackState];
+    }
 }
 
 - (void)pictureInPictureController:(AVPictureInPictureController *)pictureInPictureController

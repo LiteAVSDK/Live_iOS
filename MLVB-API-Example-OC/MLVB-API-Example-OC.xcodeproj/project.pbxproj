@@ -47,6 +47,7 @@
 		47ECB98E2626868E00201FCB /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ECB98D2626868E00201FCB /* libresolv.tbd */; };
 		47F149E4286BF3E900781688 /* PictureInPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F149E2286BF3E900781688 /* PictureInPictureViewController.m */; };
 		47F149E5286BF3E900781688 /* PictureInPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47F149E3286BF3E900781688 /* PictureInPictureViewController.xib */; };
+		47F6AE702AB7FD31003ABB14 /* PictureInPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F6AE6F2AB7FD31003ABB14 /* PictureInPictureView.m */; };
 		880B3C4A2624411B002683FB /* GenerateTestUserSig.m in Sources */ = {isa = PBXBuildFile; fileRef = 880B3C482624411B002683FB /* GenerateTestUserSig.m */; };
 		88167CB3268488C2001D99DC /* LivePushCameraEnterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88167CB1268488C2001D99DC /* LivePushCameraEnterViewController.m */; };
 		88167CB4268488C2001D99DC /* LivePushCameraEnterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88167CB2268488C2001D99DC /* LivePushCameraEnterViewController.xib */; };
@@ -201,6 +202,8 @@
 		47F149E1286BF3E900781688 /* PictureInPictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureInPictureViewController.h; sourceTree = "<group>"; };
 		47F149E2286BF3E900781688 /* PictureInPictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureInPictureViewController.m; sourceTree = "<group>"; };
 		47F149E3286BF3E900781688 /* PictureInPictureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureInPictureViewController.xib; sourceTree = "<group>"; };
+		47F6AE6E2AB7FD31003ABB14 /* PictureInPictureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureInPictureView.h; sourceTree = "<group>"; };
+		47F6AE6F2AB7FD31003ABB14 /* PictureInPictureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureInPictureView.m; sourceTree = "<group>"; };
 		880B3C482624411B002683FB /* GenerateTestUserSig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenerateTestUserSig.m; sourceTree = "<group>"; };
 		880B3C492624411B002683FB /* GenerateTestUserSig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenerateTestUserSig.h; sourceTree = "<group>"; };
 		88167CB0268488C2001D99DC /* LivePushCameraEnterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LivePushCameraEnterViewController.h; sourceTree = "<group>"; };
@@ -498,6 +501,8 @@
 				47F149E1286BF3E900781688 /* PictureInPictureViewController.h */,
 				47F149E2286BF3E900781688 /* PictureInPictureViewController.m */,
 				47F149E3286BF3E900781688 /* PictureInPictureViewController.xib */,
+				47F6AE6E2AB7FD31003ABB14 /* PictureInPictureView.h */,
+				47F6AE6F2AB7FD31003ABB14 /* PictureInPictureView.m */,
 			);
 			path = PictureInPicture;
 			sourceTree = "<group>";
@@ -922,6 +927,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47F6AE702AB7FD31003ABB14 /* PictureInPictureView.m in Sources */,
 				477EC9A226268CB9007AAC4F /* ViewController.m in Sources */,
 				C1937C94274F799200F19E99 /* LiveLinkOrPkSwitchRoleViewController.m in Sources */,
 				C1937C64274F75F700F19E99 /* LivePkUserInputViewController.m in Sources */,

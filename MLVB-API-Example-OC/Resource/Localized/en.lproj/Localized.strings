@@ -28,6 +28,8 @@
 "MLVB-API-Example.Home.PictureInPicture" = "Picture in Picture";
 "MLVB-API-Example.Home.OpenPictureInPicture" = "Open Picture in Picture";
 "MLVB-API-Example.Home.ClosePictureInPicture" = "Close Picture in Picture";
+"MLVB-API-Example.Home.pause" = "pause ";
+"MLVB-API-Example.Home.resume" = "resume";
 "MLVB-API-Example.Home.PermissionFailed" = "Failed to enable permission";
 "MLVB-API-Example.Home.NotSupported" = "Picture-in-picture is not supported";
 "MLVB-API-Example.Home.Errormessage" = "Error message:";
