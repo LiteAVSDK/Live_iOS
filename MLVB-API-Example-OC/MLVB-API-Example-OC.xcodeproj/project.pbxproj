@@ -113,6 +113,7 @@
 		EB147B18282B908100C0E2DC /* ThirdBeautyTencentEffectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB147B17282B908100C0E2DC /* ThirdBeautyTencentEffectViewController.xib */; };
 		EB147B1B282D2F1200C0E2DC /* ThirdBeautyEntranceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB147B1A282D2F1200C0E2DC /* ThirdBeautyEntranceViewController.xib */; };
 		EB147B1D282D2F1700C0E2DC /* ThirdBeautyEntranceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB147B1C282D2F1700C0E2DC /* ThirdBeautyEntranceViewController.m */; };
+		ED14F7FE2B957E6500E52959 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED14F7FD2B957E6500E52959 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -300,6 +301,7 @@
 		EB147B19282D2F0D00C0E2DC /* ThirdBeautyEntranceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdBeautyEntranceViewController.h; sourceTree = "<group>"; };
 		EB147B1A282D2F1200C0E2DC /* ThirdBeautyEntranceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdBeautyEntranceViewController.xib; sourceTree = "<group>"; };
 		EB147B1C282D2F1700C0E2DC /* ThirdBeautyEntranceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdBeautyEntranceViewController.m; sourceTree = "<group>"; };
+		ED14F7FD2B957E6500E52959 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		FB3939E2552F6AFE9F587046 /* Pods-MLVB-API-Example-OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLVB-API-Example-OC.debug.xcconfig"; path = "Target Support Files/Pods-MLVB-API-Example-OC/Pods-MLVB-API-Example-OC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -308,6 +310,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED14F7FE2B957E6500E52959 /* CoreMotion.framework in Frameworks */,
 				4723A7C426315FAA0094AC81 /* AVFoundation.framework in Frameworks */,
 				406AB164280048BB00A99B81 /* VideoToolbox.framework in Frameworks */,
 				88167CEC2685BF97001D99DC /* libz.tbd in Frameworks */,
@@ -676,6 +679,7 @@
 		88ED6FE02624364700C75B9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED14F7FD2B957E6500E52959 /* CoreMotion.framework */,
 				88BC38A12844710E00814931 /* GLKit.framework */,
 				47748037283E21F900505C4C /* CoreServices.framework */,
 				406AB169280048E100A99B81 /* MetalKit.framework */,
