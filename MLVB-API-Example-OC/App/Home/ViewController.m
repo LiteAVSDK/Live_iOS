@@ -90,6 +90,11 @@
                           @"title": localize(@"MLVB-API-Example.Home.TimeShift"),
                           @"desc": @"",
                           @"class": @"TimeShiftViewController"
+                      },
+                      @{
+                          @"title": localize(@"MLVB-API-Example.Home.NewTimeShiftSprite"),
+                          @"desc": @"",
+                          @"class": @"NewTimeShiftSpriteViewController"
                       }
 
               ]}];

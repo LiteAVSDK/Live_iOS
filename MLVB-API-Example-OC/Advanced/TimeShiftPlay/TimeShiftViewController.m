@@ -7,28 +7,28 @@
 //
 
 /*
- 时移功能
- MLVB APP 时移代码示例：
- 本文件展示如何通过移动直播SDK实现时移功能
- 1、首先在官网了解时移基本概念和使用，并开启时移功能。https://cloud.tencent.com/document/product/267/32742
- 2、根据文档规则拼接时移的播放链接 NSString *timeShiftUrl = http://[Domain]/timeshift/[AppName]/[StreamName]/timeshift.m3u8?delay=90。(delay ，默认最小90秒)
- 3、停止当前正在播放的直播流 API:[_livePlayer stopPlay];
- 4、开始播放时移流 API:[self.livePlayer startLivePlay:timeShiftUrl];
+ time shift function
+ MLVB APP time-shift code example:
+ This document shows how to implement the time shift function through the mobile live broadcast SDK
+ 1. First, understand the basic concepts and uses of time shifting on the official website, and enable the time shifting function. https://cloud.tencent.com/document/product/267/32742
+ 2. Splice the time-shifted playback link according to the document rules NSString *timeShiftUrl = http://[Domain]/timeshift/[AppName]/[StreamName]/timeshift.m3u8?delay=90. (delay, default minimum 90 seconds)
+ 3. Stop the currently playing live streaming API: [_livePlayer stopPlay];
+ 4. Start playing time-shift streaming API: [self.livePlayer startLivePlay:timeShiftUrl];
 
- 恢复直播流
- 1、停止当前正在播放的时移流 API:[_livePlayer stopPlay];
- 2、开始播放直播流 API:[self.livePlayer startLivePlay:liveUrl];
+ Resume live stream
+ 1. Stop the currently playing time-shifted stream API: [_livePlayer stopPlay];
+ 2. Start playing live streaming API: [self.livePlayer startLivePlay:liveUrl];
  
  */
 
 #import "TimeShiftViewController.h"
 #import "TimeShiftHelper.h"
 
-/// 时移功能演示，示例拉流地址。
+/// Time shift function demonstration, sample streaming address。
 static NSString * const G_DEFAULT_URL = @"http://liteavapp.qcloud.com/live/liteavdemoplayerstreamid.flv";
 static NSString * const G_DEFAULT_TIME_SHIFT_DOMAIN = @"liteavapp.timeshift.qcloud.com";
 
-// 时移区间可配置 https://cloud.tencent.com/document/product/267/32742
+// Configurable time shift interval https://cloud.tencent.com/document/product/267/32742
 static const NSInteger kMaxFallbackSeconds = 600;
 static const NSInteger kMinFallbackSeconds = 90;
 
@@ -50,7 +50,7 @@ static const NSInteger kMinFallbackSeconds = 90;
     if (!_livePlayer) {
         _livePlayer = [[V2TXLivePlayer alloc] init];
         [_livePlayer setObserver:self];
-        // 停止拉流时是否清理最后一帧
+        // Whether to clean the last frame when stopping streaming
         [_livePlayer setProperty:@"clearLastImage" value:@(NO)];
         [_livePlayer setRenderFillMode:V2TXLiveFillModeFit];
         [_livePlayer setRenderView:self.view];
@@ -111,7 +111,7 @@ static const NSInteger kMinFallbackSeconds = 90;
     return (NSInteger)(delay + 0.5);
 }
 
-// 返回直播
+// Return to live broadcast
 - (void)resumeLive {
     NSLog(@"Resmue live");
     self.slider.value = 1.0;
