@@ -7,17 +7,6 @@
 //
 
 /*
-主播连麦
- MLVB APP 主播连麦功能
- 本文件展示如何集成主播连麦功能
- 1、打开扬声器 API:[self.livePusher startMicrophone];
- 2、开始采集屏幕 API:[self.livePusher startScreenCapture:@"group.com.tencent.liteav.RPLiveStreamShare"];
- 3、开始推流 API：[self.livePusher startPush:url];
- 4、开始拉观众的流 API:[self.livePlayer startLivePlay:url];
- 5、和观众的流进行混流 API:[self.livePusher setMixTranscodingConfig:config];
- 参考文档：https://cloud.tencent.com/document/product/454/52751
- */
-/*
  Anchor-Initiated Co-anchoring
   Anchor-Initiated Co-anchoring in MLVB App
   This document shows how to integrate the anchor-initiated co-anchoring feature.

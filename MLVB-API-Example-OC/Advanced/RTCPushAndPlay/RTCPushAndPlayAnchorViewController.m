@@ -7,16 +7,6 @@
 //
 
 /*
- RTC连麦+超低延时播放的主播视角
- MLVB RTC连麦+超低延时播放的主播视角
- 本文件展示如何集成RTC连麦+超低延时播放功能
- 1、打开扬声器 API:[self.livePusher startMicrophone];
- 2、打开摄像头 API: [self.livePusher startCamera:true];
- 3、开始推流 API：[self.livePusher startPush:url];
- 4、拉观众的流 API: [self.livePlayer startLivePlay:url];
- 目前仅中国大陆支持，其他地区正陆续开发中。
- */
-/*
  RTC Co-anchoring + Ultra-low-latency Playback View for Anchors
  RTC Co-anchoring + Ultra-low-latency Playback View for Anchors in the MLVB App
  This document shows how to integrate the RTC co-anchoring + ultra-low-latency playback feature.

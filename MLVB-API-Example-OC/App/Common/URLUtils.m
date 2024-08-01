@@ -7,9 +7,9 @@
 //
 
 /*
- * MLVB 移动直播地址生成
+ * MLVB mobile live broadcast address generation
  *
- * 详情请参考：「https://cloud.tencent.com/document/product/454/7915」
+ * For details, please refer to：「https://cloud.tencent.com/document/product/454/7915」
  */
 
 #import "URLUtils.h"

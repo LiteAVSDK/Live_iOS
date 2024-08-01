@@ -4,7 +4,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 /**
-  Link用户输入页面
+  LinkUser input page
  */
 @interface LiveLinkUserInputViewController : LiveInputBaseViewController
 

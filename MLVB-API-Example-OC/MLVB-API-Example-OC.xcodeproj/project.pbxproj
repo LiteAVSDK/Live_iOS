@@ -113,7 +113,10 @@
 		EB147B18282B908100C0E2DC /* ThirdBeautyTencentEffectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB147B17282B908100C0E2DC /* ThirdBeautyTencentEffectViewController.xib */; };
 		EB147B1B282D2F1200C0E2DC /* ThirdBeautyEntranceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB147B1A282D2F1200C0E2DC /* ThirdBeautyEntranceViewController.xib */; };
 		EB147B1D282D2F1700C0E2DC /* ThirdBeautyEntranceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB147B1C282D2F1700C0E2DC /* ThirdBeautyEntranceViewController.m */; };
-		ED14F7FE2B957E6500E52959 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED14F7FD2B957E6500E52959 /* CoreMotion.framework */; };
+		ED10B3822BD6081600B28019 /* NewTimeShiftSpriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED10B37F2BD6081600B28019 /* NewTimeShiftSpriteViewController.xib */; };
+		ED10B3832BD6081600B28019 /* NewTimeShiftSpriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED10B3812BD6081600B28019 /* NewTimeShiftSpriteViewController.m */; };
+		ED10B3852BD614DF00B28019 /* TXSpriteImageFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = ED10B3842BD614DF00B28019 /* TXSpriteImageFetcher.m */; };
+		ED14F7F22B91D5C100E52959 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED14F7F12B91D5C100E52959 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -301,7 +304,12 @@
 		EB147B19282D2F0D00C0E2DC /* ThirdBeautyEntranceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdBeautyEntranceViewController.h; sourceTree = "<group>"; };
 		EB147B1A282D2F1200C0E2DC /* ThirdBeautyEntranceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdBeautyEntranceViewController.xib; sourceTree = "<group>"; };
 		EB147B1C282D2F1700C0E2DC /* ThirdBeautyEntranceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdBeautyEntranceViewController.m; sourceTree = "<group>"; };
-		ED14F7FD2B957E6500E52959 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		ED10B37F2BD6081600B28019 /* NewTimeShiftSpriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewTimeShiftSpriteViewController.xib; sourceTree = "<group>"; };
+		ED10B3802BD6081600B28019 /* NewTimeShiftSpriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTimeShiftSpriteViewController.h; sourceTree = "<group>"; };
+		ED10B3812BD6081600B28019 /* NewTimeShiftSpriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTimeShiftSpriteViewController.m; sourceTree = "<group>"; };
+		ED10B3842BD614DF00B28019 /* TXSpriteImageFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXSpriteImageFetcher.m; sourceTree = "<group>"; };
+		ED10B3862BD614ED00B28019 /* TXSpriteImageFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXSpriteImageFetcher.h; sourceTree = "<group>"; };
+		ED14F7F12B91D5C100E52959 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		FB3939E2552F6AFE9F587046 /* Pods-MLVB-API-Example-OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLVB-API-Example-OC.debug.xcconfig"; path = "Target Support Files/Pods-MLVB-API-Example-OC/Pods-MLVB-API-Example-OC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -310,7 +318,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED14F7FE2B957E6500E52959 /* CoreMotion.framework in Frameworks */,
+				ED14F7F22B91D5C100E52959 /* CoreMotion.framework in Frameworks */,
 				4723A7C426315FAA0094AC81 /* AVFoundation.framework in Frameworks */,
 				406AB164280048BB00A99B81 /* VideoToolbox.framework in Frameworks */,
 				88167CEC2685BF97001D99DC /* libz.tbd in Frameworks */,
@@ -450,6 +458,7 @@
 		47E0727A2636A6C80027D05E /* Advanced */ = {
 			isa = PBXGroup;
 			children = (
+				ED10B37E2BD6081600B28019 /* NewTimeShiftSprite */,
 				8873801928D9E49100B0479E /* LebAutoBitrate */,
 				8873802A28E18C8B00B0479E /* HlsAutoBitrate */,
 				47F149E0286BF3A600781688 /* PictureInPicture */,
@@ -679,7 +688,7 @@
 		88ED6FE02624364700C75B9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ED14F7FD2B957E6500E52959 /* CoreMotion.framework */,
+				ED14F7F12B91D5C100E52959 /* CoreMotion.framework */,
 				88BC38A12844710E00814931 /* GLKit.framework */,
 				47748037283E21F900505C4C /* CoreServices.framework */,
 				406AB169280048E100A99B81 /* MetalKit.framework */,
@@ -730,6 +739,18 @@
 				97A3EA6760997730612F7505 /* Pods-TXReplayKit_Screen.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		ED10B37E2BD6081600B28019 /* NewTimeShiftSprite */ = {
+			isa = PBXGroup;
+			children = (
+				ED10B37F2BD6081600B28019 /* NewTimeShiftSpriteViewController.xib */,
+				ED10B3802BD6081600B28019 /* NewTimeShiftSpriteViewController.h */,
+				ED10B3812BD6081600B28019 /* NewTimeShiftSpriteViewController.m */,
+				ED10B3842BD614DF00B28019 /* TXSpriteImageFetcher.m */,
+				ED10B3862BD614ED00B28019 /* TXSpriteImageFetcher.h */,
+			);
+			path = NewTimeShiftSprite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -834,6 +855,7 @@
 				8839C3CB2689B93F000FF58C /* LivePlayEnterViewController.xib in Resources */,
 				477EC9A826268D0F007AAC4F /* Localized.strings in Resources */,
 				88167CB4268488C2001D99DC /* LivePushCameraEnterViewController.xib in Resources */,
+				ED10B3822BD6081600B28019 /* NewTimeShiftSpriteViewController.xib in Resources */,
 				88C4C063268B503000FBB698 /* CustomVideoCaptureViewController.xib in Resources */,
 				C1937C9C274F799200F19E99 /* LiveLinkAudienceViewController.xib in Resources */,
 				88A1A885268DA7DA007F630D /* LivePkAnchorViewController.xib in Resources */,
@@ -936,6 +958,7 @@
 				C1937C94274F799200F19E99 /* LiveLinkOrPkSwitchRoleViewController.m in Sources */,
 				C1937C64274F75F700F19E99 /* LivePkUserInputViewController.m in Sources */,
 				88A1A88A268DA81A007F630D /* LivePkAudienceViewController.m in Sources */,
+				ED10B3852BD614DF00B28019 /* TXSpriteImageFetcher.m in Sources */,
 				477EC9C32626D6AB007AAC4F /* UIColor+Hex.m in Sources */,
 				C1937C9B274F799200F19E99 /* LiveLinkAnchorViewController.m in Sources */,
 				C1937C9A274F799200F19E99 /* LiveInputBaseViewController.m in Sources */,
@@ -953,6 +976,7 @@
 				885A56472689ABB500D9D55F /* LivePushScreenEnterViewController.m in Sources */,
 				C1937C99274F799200F19E99 /* LiveLinkUserInputViewController.m in Sources */,
 				477ECA0A2627D344007AAC4F /* UIViewController+AlertViewController.m in Sources */,
+				ED10B3832BD6081600B28019 /* NewTimeShiftSpriteViewController.m in Sources */,
 				47F149E4286BF3E900781688 /* PictureInPictureViewController.m in Sources */,
 				8839C3D52689BEF5000FF58C /* LivePlayViewController.m in Sources */,
 				C1937CBD275080CB00F19E99 /* LivePkFindPkUserController.m in Sources */,
