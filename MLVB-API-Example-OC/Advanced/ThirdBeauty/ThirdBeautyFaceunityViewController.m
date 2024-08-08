@@ -7,19 +7,6 @@
 //
 
 /*
- 第三方美颜功能示例
- MLVB APP 支持第三方美颜功能
- 本文件展示如何集成第三方美颜功能
- 1、打开扬声器 API:[self.livePusher startMicrophone];
- 2、打开摄像头 API: [self.livePusher startCamera:true];
- 3、开始推流 API：[self.livePusher startPush:url];
- 4、开启自定义视频处理 API: [self.livePusher enableCustomVideoProcess:true pixelFormat:V2TXLivePixelFormatNV12 bufferType:V2TXLiveBufferTypePixelBuffer];
- 5、使用第三方美颜SDK<Demo中使用的是Faceunity>: API: [[FUManager shareManager] renderItemsToPixelBuffer:srcFrame.pixelBuffer];
-
- 参考文档：https://cloud.tencent.com/document/product/647/34066
- 第三方美颜：https://github.com/Faceunity/FUTRTCDemo
- */
-/*
  Third-Party Beauty Filter Example
  The MLVB app supports third-party beauty filters.
  This document shows how to integrate third-party beauty filters.

@@ -38,6 +38,7 @@
 
 "MLVB-API-Example.Home.TimeShift.ResumeLive" = "Resume Live";
 
+"MLVB-API-Example.Home.NewTimeShiftSprite" = "New Time Shift Sprite";
 "MLVB-API-Example.LivePushCamera.title" = "MLVB Publishing (Camera)";
 "MLVB-API-Example.LivePushCamera.streamIdInput" = "Stream ID";
 "MLVB-API-Example.LivePushCamera.audioQualityInput" = "Audio Quality";

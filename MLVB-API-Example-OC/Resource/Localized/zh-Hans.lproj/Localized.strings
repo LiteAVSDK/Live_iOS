@@ -40,6 +40,7 @@
 
 "MLVB-API-Example.Home.TimeShift.ResumeLive" = "返回直播";
 
+"MLVB-API-Example.Home.NewTimeShiftSprite" = "新直播时移雪碧图";
 "MLVB-API-Example.LivePushCamera.title" = "MLVB 摄像头推流";
 "MLVB-API-Example.LivePushCamera.streamIdInput" = "请输入streamId";
 "MLVB-API-Example.LivePushCamera.audioQualityInput" = "请选择音频质量";

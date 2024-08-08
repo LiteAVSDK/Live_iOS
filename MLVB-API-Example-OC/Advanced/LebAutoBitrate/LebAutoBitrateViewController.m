@@ -1,15 +1,5 @@
 //  Copyright © 2022 Tencent. All rights reserved.
 /*
-快直播自适应码率播放
- MLVB APP 快直播自适应码率播放功能
- 本文件展示如何集成快直播自适应码率播放功能
- 1、设置渲染画面 API:[self.livePlayer setRenderView:self.view];
- 2、开始播放 API: [self.livePlayer startLivePlay:url];
- 参考文档：https://cloud.tencent.com/document/product/454/81212
- 开始自适应码率播放后，就无法进行进行无缝切流了。如果在播放状态进入自适应码率，
- 需要先停止当前播放，然后再开始自适应播放
- */
-/*
 Webrtc Auto Bitrate
  MLVB APP Webrtc Auto Bitrate
  1、Set Render View API:[self.livePlayer setRenderView:self.view];
