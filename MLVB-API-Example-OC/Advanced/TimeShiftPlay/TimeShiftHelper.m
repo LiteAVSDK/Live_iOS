@@ -3,7 +3,7 @@
 //  TXLiteAVSDK
 //
 //  Created by annidyfeng on 2018/8/10.
-//  Copyright © 2018年 Tencent. All rights reserved.
+//  Copyright © 2018 Tencent. All rights reserved.
 //
 
 #import "TimeShiftHelper.h"

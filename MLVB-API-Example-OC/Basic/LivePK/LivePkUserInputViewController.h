@@ -4,7 +4,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 /**
- Pk用户输入页面
+ Pk user input page
  */
 @interface LivePkUserInputViewController : LiveInputBaseViewController
 

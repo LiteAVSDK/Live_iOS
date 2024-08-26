@@ -1,13 +1,5 @@
 //  Copyright © 2022 Tencent. All rights reserved.
 /*
- 快直播拉流
- MLVB APP 快直播拉流功能
- 本文件展示如何集成快直播拉流功能
- 1、设置渲染的view API:[self.livePlayer setRenderView:self.view];
- 2、开始播放 API:[self.livePlayer startLivePlay:url];
- 参考文档：https://cloud.tencent.com/document/product/454/55880
- */
-/*
  LEB Playback
  LEB Playback in MLVB App
  This document shows how to integrate the LEB playback feature.

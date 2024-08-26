@@ -7,19 +7,6 @@
 //
 
 /*
-观众连麦
- MLVB APP 观众连麦功能
- 本文件展示如何集成观众连麦功能
- 1、设置渲染的view API:[self.livePlayer setRenderView:self.view];
- 2、开始快直播拉流 API:[self.livePlayer startLivePlay:url];
- 3、停止快直播拉流 API:[self.livePlayer startLivePlay:url];
- 4、开始推流 API:[self.livePusher startPush:url];
- 5、开始RTC拉流：API:[self.livePlayer startLivePlay:url];
- 参考文档：https://cloud.tencent.com/document/product/454/52751
- 目前仅中国大陆支持，其他地区正陆续开发中。
-
- */
-/*
  Audience-Initiated Co-anchoring
   Audience-Initiated Co-anchoring in MLVB App
   This document shows how to integrate the audience-initiated co-anchoring feature.

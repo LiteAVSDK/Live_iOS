@@ -1,5 +1,5 @@
 # MLVB API-Example 
-[简体中文](README.cn.md) | English
+[简体中文](README-zh_CN.md) | English
 
 ## Background
 This open-source demo shows how to use some APIs of the [MLVB SDK](https://www.tencentcloud.com/document/product/1071) to help you better understand the APIs and use them to implement some basic MLVB features. 
@@ -50,14 +50,14 @@ You have [signed up for a Tencent Cloud account](https://intl.cloud.tencent.com/
 3. Set parameters in `GenerateTestUserSig.h` as follows:
 
   - `SDKAPPID`: set it to the `SDKAppID` obtained in the previous step.
-  - `SECRETKEY`: set it to the secret key obtained in the previous step.
+  - `SDKSECRETKEY`: set it to the secret key obtained in the previous step.
   - `LICENSEURL`: a placeholder by default. Set it to the actual license URL.
   - `LICENSEURLKEY`: a placeholder by default. Set it to the actual license key.
   - `PUSH_DOMAIN`: set it to the configured publishing URL.
   - `PLAY_DOMAIN`: set it to the configured playback URL.
   - `LIVE_URL_KEY`: set it to the authentication key (if authentication configuration is enabled).
 
->!The method for generating `UserSig` described in this document involves configuring `SECRETKEY` in client code. In this method, `SECRETKEY` may be easily decompiled and reversed, and if your key is disclosed, attackers can steal your Tencent Cloud traffic. Therefore, **this method is suitable only for the local execution and debugging of the demo**.
+>!The method for generating `UserSig` described in this document involves configuring `SDKSECRETKEY` in client code. In this method, `SDKSECRETKEY` may be easily decompiled and reversed, and if your key is disclosed, attackers can steal your Tencent Cloud traffic. Therefore, **this method is suitable only for the local execution and debugging of the demo**.
 >The correct `UserSig` distribution method is to integrate the calculation code of `UserSig` into your server and provide an application-oriented API. When `UserSig` is needed, your application can send a request to the business server for a dynamic `UserSig`. For more information, please see [How do I calculate UserSig on the server?](https://www.tencentcloud.com/document/product/1071/39471).
 
 ## Compiling and running the project
