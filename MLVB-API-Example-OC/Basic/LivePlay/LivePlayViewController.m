@@ -7,16 +7,6 @@
 //
 
 /*
- 直播拉流
- MLVB APP 直播拉流功能
- 本文件展示如何集成直播拉流功能
- 1、设置渲染的view API:[self.livePlayer setRenderView:self.view];
- 2、开始播放 API:[self.livePlayer startLivePlay:url];
- 参考文档：https://cloud.tencent.com/document/product/454/56597
- RTC拉流目前仅中国大陆支持，其他地区正陆续开发中。
-
- */
-/*
  Playback
  Playback in MLVB App
  This document shows how to integrate the playback feature.

@@ -7,16 +7,6 @@
 //
 
 /*
-自定义视频采集
- MLVB APP 自定义视频采集功能
- 本文件展示如何集成自定义视频采集功能
- 1、打开扬声器 API:[self.livePusher startMicrophone];
- 2、开启自定义采集 API: [self.livePusher enableCustomVideoCapture:true];
- 3、开始推流 API：[self.livePusher startPush:[LiveUrl generateTRTCPushUrl:streamId]];
- 4、发送数据 API: [self.livePusher sendCustomVideoFrame:videoFrame];
- 参考文档：https://cloud.tencent.com/document/product/454/56601
- */
-/*
  Custom Video Capturing
   Custom Video Capturing in MLVB App
   This document shows how to integrate the custom video capturing feature.
