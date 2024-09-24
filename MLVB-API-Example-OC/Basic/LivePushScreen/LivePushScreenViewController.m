@@ -7,16 +7,6 @@
 //
 
 /*
-录屏推流
- MLVB APP 录屏推流功能
- 本文件展示如何集成录屏推流功能
- 1、打开扬声器 API:[self.livePusher startMicrophone];
- 2、开始采集屏幕 API:[self.livePusher startScreenCapture:@"group.com.tencent.liteav.RPLiveStreamShare"];
- 3、开始推流 API：[self.livePusher startPush:url];
- 参考文档：https://cloud.tencent.com/document/product/454/56591
- RTC推流目前仅中国大陆支持，其他地区正陆续开发中。
- */
-/*
  Publishing from Screen
   Publishing from Screen in MLVB App
   This document shows how to integrate the feature of publishing from the screen.

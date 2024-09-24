@@ -7,16 +7,6 @@
 //
 
 /*
-摄像头推流
- MLVB APP 摄像头推流功能
- 本文件展示如何集成摄像头推流功能
- 1、打开扬声器 API:[self.livePusher startMicrophone];
- 2、打开摄像头 API: [self.livePusher startCamera:true];
- 3、开始推流 API：[self.livePusher startPush:url];
- 参考文档：https://cloud.tencent.com/document/product/454/56594
- RTC推流目前仅中国大陆支持，其他地区正陆续开发中。
- */
-/*
  Publishing from Camera
   Publishing from Camera in MLVB App
   This document shows how to integrate the feature of publishing from the camera.
