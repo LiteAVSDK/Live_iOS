@@ -4,7 +4,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 /**
-  Link和Pk输入页面基类
+  Link and Pk input page base class
  */
 @interface LiveInputBaseViewController : UIViewController
 
