@@ -7,19 +7,6 @@
 //
 
 /*
-主播PK
- MLVB APP 主播PK功能
- 本文件展示如何集成主播PK功能
- 1、打开扬声器 API:[self.livePusher startMicrophone];
- 2、开始采集屏幕 API:[self.livePusher startScreenCapture:@"group.com.tencent.liteav.RPLiveStreamShare"];
- 3、开始推流 API：[self.livePusher startPush:url];
- 4、开始拉主播的流 API:[self.livePlayer startLivePlay:url];
- 5、和主播的流进行混流 API:[self.livePusher setMixTranscodingConfig:config];
- 参考文档：https://cloud.tencent.com/document/product/454/52751
- 目前仅中国大陆支持，其他地区正陆续开发中。
- */
-/*
-主播PK
  Anchor Competition
   Anchor Competition in MLVB App
   This document shows how to integrate the anchor competition feature.

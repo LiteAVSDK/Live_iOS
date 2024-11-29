@@ -11,18 +11,6 @@
 #import "PictureInPictureView.h"
 
 /*
- 画中画功能（iOS15及以上支持）
- MLVB APP 画中画功能代码示例：
- 本文件展示如何通过移动直播SDK实现iOS系统上的画中画功能
- 1、开启自定义渲染 API:[self.livePlayer enableObserveVideoFrame:YES pixelFormat:V2TXLivePixelFormatNV12 bufferType:V2TXLiveBufferTypePixelBuffer];
- 2、需要开启SDK的后台解码能力 API:[_livePlayer setProperty:@"enableBackgroundDecoding" value:@(YES)];
- 3、使用系统 API创建画中画内容源: AVPictureInPictureControllerContentSource *contentSource = [[AVPictureInPictureControllerContentSource alloc] initWithSampleBufferDisplayLayer:self.sampleBufferDisplayLayer playbackDelegate:self];
- 4、使用系统 API创建画中画控制器: [[AVPictureInPictureController alloc] initWithContentSource:contentSource];
- 5、在SDK回调:- (void)onRenderVideoFrame:(id<V2TXLivePlayer>)player frame:(V2TXLiveVideoFrame *)videoFrame内将pixelBuffer转为SampleBuffer并交给AVSampleBufferDisplayLayer进行渲染;
- 6、使用系统 API开启画中画功能：[self.pipViewController startPictureInPicture];
- */
-
-/*
  Picture-in-picture Example (supported by iOS15 and above)
  MLVB APP picture-in-picture function code example:
  This document shows how to implement the picture-in-picture function on the iOS system through the Mobile Live SDK
@@ -94,7 +82,8 @@ AVPictureInPictureSampleBufferPlaybackDelegate>
             self.pipViewController = [[AVPictureInPictureController alloc] initWithContentSource:contentSource];
             self.pipViewController.delegate = self;
             self.pipViewController.canStartPictureInPictureAutomaticallyFromInline = YES;
-            self.pipViewController.requiresLinearPlayback = YES;  // 设置画中画小窗中是否有快进快退按钮
+            self.pipViewController.requiresLinearPlayback = YES;
+            // Set whether there are fast forward and rewind buttons in the small picture-in-picture window
         } else {
             NSLog(@"%@",localize(@"MLVB-API-Example.Home.NotSupported"));
         }
